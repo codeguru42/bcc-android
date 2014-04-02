@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.codeprogression.boisecodecamp" >
+    package="com.codeprogression.boisecodecamp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".CodeCampApplication"
+        android:name="com.codeprogression.boisecodecamp.CodeCampApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.Bcc" >
+        android:theme="@style/Theme.Bcc">
         <activity
-            android:name=".ui.MainActivity"
-            android:label="@string/app_name" >
+            android:name="com.codeprogression.boisecodecamp.ui.MainActivity"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,12 +20,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.SettingsActivity"
-            android:label="@string/title_activity_settings" >
-        </activity>
+            android:name="com.codeprogression.boisecodecamp.ui.SettingsActivity"
+            android:label="@string/title_activity_settings"/>
+        <activity
+            android:name=".ui.speakers.SpeakerDetailActivity"
+            android:label="@string/title_activity_speaker_detail"/>
+        <activity
+            android:name=".ui.sessions.SessionDetailActivity"
+            android:label="@string/title_activity_session_detail"/>
+        <activity
+            android:name="com.codeprogression.boisecodecamp.ui.ErrorActivity"
+            android:label="@string/title_activity_error"/>
+
+        <meta-data
+            android:name="com.crashlytics.ApiKey"
+            android:value="8d8b19ca26df611c13afe7eadd19ff9ee759dd13" />
     </application>
 
-    <!-- To access Google+ APIs: -->
-    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

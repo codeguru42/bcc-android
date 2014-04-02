@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.codeprogression.boisecodecamp.ui.sessions.SessionDetailFragment">
+
+    <ImageView
+        android:id="@+id/speaker_image"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"/>
+
+    <TextView
+        android:textSize="@dimen/gutter_md"
+        android:id="@+id/speaker_twitter"
+        android:drawableLeft="@drawable/ic_twitter"
+        android:drawablePadding="@dimen/gutter_sm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/speaker_image"
+        android:layout_toLeftOf="@id/speaker_image"
+        android:layout_alignParentLeft="true"
+        android:paddingBottom="@dimen/gutter_lg"
+        android:text="twitter_handle"/>
+
+    <TextView
+        style="@style/Feature.Title"
+        android:id="@+id/speaker_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/gutter_xs"
+        android:layout_toLeftOf="@id/speaker_image"
+        android:layout_alignParentLeft="true"
+        android:layout_above="@id/speaker_twitter"
+        android:text="name"/>
+
+    <TextView
+        android:id="@+id/speaker_bio"
+        android:textSize="@dimen/text_md"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/speaker_image"
+        android:paddingTop="@dimen/gutter_lg"
+        android:paddingBottom="@dimen/gutter_lg"
+        android:text="bio"/>
+
+    <ListView
+        android:id="@+id/speaker_other"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/speaker_bio"
+        android:divider="@null"/>
+
+</RelativeLayout>

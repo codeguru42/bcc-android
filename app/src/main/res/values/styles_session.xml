@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Feature"/>
+    <style name="Feature.Title">
+        <item name="android:textSize">@dimen/text_lg</item>
+    </style>
+
+</resources>

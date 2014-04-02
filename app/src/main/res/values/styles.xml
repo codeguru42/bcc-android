@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- File created by the Android Action Bar Style Generator
+<!--
+ File created by the Android Action Bar Style Generator
 
      Copyright (C) 2011 The Android Open Source Project
      Copyright (C) 2012 readyState Software Ltd
@@ -16,7 +17,6 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <resources>
 
     <style name="Theme.Bcc" parent="@style/Theme.AppCompat.Light.DarkActionBar">
@@ -30,9 +30,8 @@
         <item name="actionModeSplitBackground">@drawable/cab_background_bottom_bcc</item>
         <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Bcc</item>
 
-                <!-- Light.DarkActionBar specific -->
+        <!-- Light.DarkActionBar specific -->
         <item name="actionBarWidgetTheme">@style/Theme.Bcc.Widget</item>
-
     </style>
 
     <style name="ActionBar.Solid.Bcc" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
@@ -46,11 +45,11 @@
         <item name="background">@drawable/ab_transparent_bcc</item>
         <item name="progressBarStyle">@style/ProgressBar.Bcc</item>
     </style>
-	
-    <style name="PopupMenu.Bcc" parent="@style/Widget.AppCompat.PopupMenu">	
-        <item name="android:popupBackground">@drawable/menu_dropdown_panel_bcc</item>	
+
+    <style name="PopupMenu.Bcc" parent="@style/Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_bcc</item>
     </style>
-	
+
     <style name="DropDownListView.Bcc" parent="@style/Widget.AppCompat.ListView.DropDown">
         <item name="android:listSelector">@drawable/selectable_background_bcc</item>
     </style>
@@ -58,25 +57,52 @@
     <style name="ActionBarTabStyle.Bcc" parent="@style/Widget.AppCompat.ActionBar.TabView">
         <item name="android:background">@drawable/tab_indicator_ab_bcc</item>
     </style>
-	
+
     <style name="DropDownNav.Bcc" parent="@style/Widget.AppCompat.Spinner.DropDown.ActionBar">
         <item name="android:background">@drawable/spinner_background_ab_bcc</item>
         <item name="android:popupBackground">@drawable/menu_dropdown_panel_bcc</item>
         <item name="android:dropDownSelector">@drawable/selectable_background_bcc</item>
     </style>
-    
+
     <style name="ProgressBar.Bcc" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">
         <item name="android:progressDrawable">@drawable/progress_horizontal_bcc</item>
     </style>
-    
+
     <style name="ActionButton.CloseMode.Bcc" parent="@style/Widget.AppCompat.ActionButton.CloseMode">
         <item name="android:background">@drawable/btn_cab_done_bcc</item>
     </style>
-    
+
     <!-- this style is only referenced in a Light.DarkActionBar based theme -->
     <style name="Theme.Bcc.Widget" parent="@style/Theme.AppCompat">
         <item name="popupMenuStyle">@style/PopupMenu.Bcc</item>
         <item name="dropDownListViewStyle">@style/DropDownListView.Bcc</item>
     </style>
+
+    <style name="Text" />
+
+    <style name="Text.Secondary">
+        <item name="android:textColor">@android:color/secondary_text_light</item>
+    </style>
+
+    <style name="Text.Secondary.Large">
+        <item name="android:textSize">@dimen/text_lg</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="android:Theme.NoTitleBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">@style/ButtonBar</item>
+        <item name="metaButtonBarButtonStyle">@style/ButtonBarButton</item>
+    </style>
+
+    <style name="ButtonBar">
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:background">@android:drawable/bottom_bar</item>
+    </style>
+
+    <style name="ButtonBarButton" />
 
 </resources>

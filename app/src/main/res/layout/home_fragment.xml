@@ -5,12 +5,25 @@
     tools:context="com.codeprogression.boisecodecamp.ui.MainActivity$PlaceholderFragment">
 
     <ImageView
+        android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/bcc_logo"
         android:scaleType="center"
         android:adjustViewBounds="true"
         android:layout_centerHorizontal="true"
+        android:padding="@dimen/gutter_lg"
          />
+
+    <TextView
+        android:id="@+id/date"
+        android:textSize="@dimen/text_xl"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Saturday, April 5th, 2014"/>
 
 </RelativeLayout>

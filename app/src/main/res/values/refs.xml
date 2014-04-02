@@ -7,6 +7,7 @@
     For more on layout aliases, see:
     http://developer.android.com/training/multiscreen/screensizes.html#TaskUseAliasFilters
     -->
-    <item name="fragment_speaker" type="layout">@layout/speaker_list_fragment</item>
+    <!--<item name="speaker_fragment" type="layout">@layout/speaker_grid_fragment</item>-->
+    <!--<item name="session_fragment" type="layout">@layout/session_list_fragment</item>-->
 
 </resources>

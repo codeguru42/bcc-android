@@ -1,6 +1,7 @@
 package com.codeprogression.boisecodecamp;
 
 import com.codeprogression.boisecodecamp.core.DaggerApplication;
+import com.crashlytics.android.Crashlytics;
 
 public class CodeCampApplication extends DaggerApplication {
 
@@ -10,6 +11,10 @@ public class CodeCampApplication extends DaggerApplication {
     public void onCreate() {
         super.onCreate();
         instance = this;
+
+//        if (!BuildConfig.DEBUG) {
+//            Crashlytics.start(this);
+//        }
     }
 
     public static CodeCampApplication getInstance(){
