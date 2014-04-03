@@ -56,13 +56,9 @@ Second, we turn to our software engineering principles. You may know some of the
 
 
 
-
-
-
-
-
-
 # List Adapter Patterns
+
+I'm going to play a little clip for you, cuz I'm like that.
 
 ## The Inflate and Find Pattern (adapter_pt_1)
 
@@ -110,7 +106,17 @@ Is this the best we can do? (of course...wait...I mean...NO!)
 
 Let's make one more refinement
 
-## The External ListItem View Pattern (adapter_pt_4)
+## The ExternalListItem View Pattern (adapter_pt_4)
+
+Here is the final step...or what we like to call the right way
+
+Our get view has 3 steps:
+
+* create or recycle a view (model)
+* pass the model data to the view model
+* return the configured view as a row in the list
+
+Our SessionListItemView is subclassed from RelativeLayout and does what our ViewHolder did. But this is more explicit. And the adapter is much cleaner.
 
 
 
