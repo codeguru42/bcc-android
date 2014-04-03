@@ -5,10 +5,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.codeprogression.boisecodecamp.R;
-import com.codeprogression.boisecodecamp.ui.sessions.BetterSessionListFragment;
-import com.codeprogression.boisecodecamp.ui.sessions.TypicalSessionListFragment;
+import com.codeprogression.boisecodecamp.ui.sessions.SessionListFragment;
 import com.codeprogression.boisecodecamp.ui.speakers.SpeakerListFragment;
-import com.codeprogression.boisecodecamp.ui.speakers.adapters.SpeakerPagerAdapter;
 
 import java.util.Locale;
 
@@ -27,7 +25,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         // Return a PlaceholderFragment (defined as a static inner class below).
         switch (position) {
             case 1:
-                return TypicalSessionListFragment.newInstance();
+                return SessionListFragment.newInstance();
             case 2:
                 return SpeakerListFragment.newInstance();
             case 0:
