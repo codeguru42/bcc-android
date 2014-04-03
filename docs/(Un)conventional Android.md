@@ -72,7 +72,7 @@ Let's go ahead and refactor this a little.
 
 Ok, now we are reusing our row view when we can. But, we are having to find our textview elements on every pass.
 
-Is there a better way? (of course)
+Is there a better way? (of course`)
 
 ## The ViewHolder Pattern (adapter_pt_2)
 
@@ -85,11 +85,30 @@ Why its better?
 Why its not?
 
 * Still very cluttered and unreadable 
-* What is the purpose of this method? ... To get the view - not to construct it.
+* What is the purpose of this method? ... To get the view - not to construct it. This method is still doing too much
+
+Is there more we can do?
 
 ## The ButterKnife Holder Pattern (adapter_pt_3)
 
+We have imported a View Injection Library from the insanely smart Jake Wharton who now works for Square. 
 
+In this pattern, we pass our view into the view holder and instruct Butterknife to find and assign our annotated fields.
+
+Why is this better?
+
+* We are using a dependency injection (D in SOLID anyone) to create our view dependencies. This still only happens once per "visible" row and the holder gets recycled.
+
+Can we make it better? (of course)
+
+* We can also pass in the model to the view holder and have it assign the values to the TextViews.
+
+Is this the best we can do? (of course...wait...I mean...NO!)
+
+* Is the method still doing more than it should?
+* I think so
+
+Let's make one more refinement
 
 ## The External ListItem View Pattern (adapter_pt_4)
 
