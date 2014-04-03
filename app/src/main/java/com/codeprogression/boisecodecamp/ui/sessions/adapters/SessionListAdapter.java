@@ -12,14 +12,11 @@ import com.codeprogression.boisecodecamp.api.models.Session;
 
 import java.util.List;
 
-import butterknife.ButterKnife;
-import butterknife.InjectView;
-
-public class BetterSessionListAdapter extends ArrayAdapter<Session> implements IListable {
+public class SessionListAdapter extends ArrayAdapter<Session>  {
 
     private List<Session> list;
 
-    public BetterSessionListAdapter(Context context, List<Session> list) {
+    public SessionListAdapter(Context context, List<Session> list) {
         super(context, R.layout.session_list_item_view, list);
         this.list = list;
     }
@@ -27,6 +24,7 @@ public class BetterSessionListAdapter extends ArrayAdapter<Session> implements I
     public List<Session> getList() {
         return list;
     }
+
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -36,8 +34,13 @@ public class BetterSessionListAdapter extends ArrayAdapter<Session> implements I
         ViewHolder holder;
         if (convertView == null){
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.session_list_item_view, parent, false);
-            holder = new ViewHolder(convertView);
             assert convertView != null;
+
+            holder = new ViewHolder();
+            holder.titleView = (TextView) convertView.findViewById(R.id.title);
+            holder.timesView = (TextView) convertView.findViewById(R.id.times);
+            holder.speakerNamesView = (TextView) convertView.findViewById(R.id.speaker_names);
+            holder.spaceView = (TextView) convertView.findViewById(R.id.space);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
@@ -59,15 +62,11 @@ public class BetterSessionListAdapter extends ArrayAdapter<Session> implements I
     }
 
 
-    static class ViewHolder {
+    private class ViewHolder {
 
-        @InjectView(R.id.title)         TextView titleView;
-        @InjectView(R.id.times)         TextView timesView;
-        @InjectView(R.id.speaker_names) TextView speakerNamesView;
-        @InjectView(R.id.space)         TextView spaceView;
-
-        private ViewHolder(View view) {
-            ButterKnife.inject(this, view);
-        }
+        public TextView titleView;
+        public TextView timesView;
+        public TextView speakerNamesView;
+        public TextView spaceView;
     }
 }
