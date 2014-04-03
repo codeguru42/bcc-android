@@ -64,11 +64,32 @@ Second, we turn to our software engineering principles. You may know some of the
 
 # List Adapter Patterns
 
-## The Inflate Everything Pattern (adapter_pt_1)
+## The Inflate and Find Pattern (adapter_pt_1)
+
+Here we are causing a performance hit. Inflating each row every time is wasteful. We need to recycle, just like in real life.
+
+Let's go ahead and refactor this a little. 
+
+Ok, now we are reusing our row view when we can. But, we are having to find our textview elements on every pass.
+
+Is there a better way? (of course)
 
 ## The ViewHolder Pattern (adapter_pt_2)
 
+Here is a pattern you will see quite a bit in the wild. The idea is to take a class and store it with the view. The class has references to the view elements (already inflated) to just update with new information.
+
+Why its better?
+
+* Rows are recycled (view inflation only happens if necessary)
+
+Why its not?
+
+* Still very cluttered and unreadable 
+* What is the purpose of this method? ... To get the view - not to construct it.
+
 ## The ButterKnife Holder Pattern (adapter_pt_3)
+
+
 
 ## The External ListItem View Pattern (adapter_pt_4)
 
