@@ -15,11 +15,11 @@ import java.util.List;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-public class BetterSessionListAdapter extends ArrayAdapter<Session> implements IListable {
+public class SessionListAdapter extends ArrayAdapter<Session> {
 
     private List<Session> list;
 
-    public BetterSessionListAdapter(Context context, List<Session> list) {
+    public SessionListAdapter(Context context, List<Session> list) {
         super(context, R.layout.session_list_item_view, list);
         this.list = list;
     }

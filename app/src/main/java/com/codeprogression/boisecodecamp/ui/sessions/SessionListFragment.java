@@ -12,11 +12,7 @@ import com.codeprogression.boisecodecamp.R;
 import com.codeprogression.boisecodecamp.api.LanyrdApi;
 import com.codeprogression.boisecodecamp.api.models.Session;
 import com.codeprogression.boisecodecamp.api.models.SessionsResponse;
-import com.codeprogression.boisecodecamp.ui.sessions.adapters.BadSessionListAdapter;
-import com.codeprogression.boisecodecamp.ui.sessions.adapters.BestSessionListAdapter;
-import com.codeprogression.boisecodecamp.ui.sessions.adapters.BetterSessionListAdapter;
-import com.codeprogression.boisecodecamp.ui.sessions.adapters.IListable;
-import com.codeprogression.boisecodecamp.ui.sessions.adapters.TypicalSessionListAdapter;
+import com.codeprogression.boisecodecamp.ui.sessions.adapters.SessionListAdapter;
 import com.codeprogression.boisecodecamp.ui.core.BaseListFragment;
 
 import java.util.ArrayList;
@@ -31,7 +27,8 @@ import retrofit.client.Response;
 
 public class SessionListFragment extends BaseListFragment {
 
-    @Inject LanyrdApi api;
+    @Inject
+    LanyrdApi api;
 
     public static SessionListFragment newInstance() {
         return new SessionListFragment();
@@ -54,10 +51,14 @@ public class SessionListFragment extends BaseListFragment {
 
                 List<Session> sessions = sessionsResponse.getSessions();
 
-//                useBadSessionListAdapter(sessions);
-//                useSessionListAdapter(sessions);
-//                useBetterSessionListAdapter(sessions);
-                useBestSessionListAdapter(sessions);
+                SessionListAdapter listAdapter = (SessionListAdapter) getListAdapter();
+
+                if (listAdapter == null) {
+                    SessionListAdapter adapter = new SessionListAdapter(getActivity(), sessions);
+                    setListAdapter(adapter);
+                } else {
+                    listAdapter.updateSessionList(sessions);
+                }
             }
 
             @Override
@@ -71,79 +72,9 @@ public class SessionListFragment extends BaseListFragment {
         super.onListItemClick(l, v, position, id);
         Intent intent = new Intent(getActivity(), SessionDetailActivity.class);
         Bundle bundle = new Bundle();
-        bundle.putParcelableArrayList("SESSION_LIST", new ArrayList<>(((IListable)getListAdapter()).getList()));
+        bundle.putParcelableArrayList("SESSION_LIST", new ArrayList<>(((SessionListAdapter) getListAdapter()).getList()));
         bundle.putInt("POSITION", position);
         intent.putExtras(bundle);
         startActivity(intent);
     }
-
-
-    //region Session List Adapters
-
-    //region Bad
-
-    @SuppressWarnings("UnusedDeclaration")
-    private void useBadSessionListAdapter(List<Session> sessions) {
-        BadSessionListAdapter listAdapter = (BadSessionListAdapter)getListAdapter();
-
-        if (listAdapter == null){
-            BadSessionListAdapter adapter = new BadSessionListAdapter(getActivity(), sessions);
-            setListAdapter(adapter);
-        } else {
-            listAdapter.updateSessionList(sessions);
-        }
-    }
-
-    //endregion
-
-    //region Normal
-
-    @SuppressWarnings("UnusedDeclaration")
-    private void useSessionListAdapter(List<Session> sessions) {
-        TypicalSessionListAdapter listAdapter = (TypicalSessionListAdapter)getListAdapter();
-
-        if (listAdapter == null){
-            TypicalSessionListAdapter adapter = new TypicalSessionListAdapter(getActivity(), sessions);
-            setListAdapter(adapter);
-        } else {
-            listAdapter.updateSessionList(sessions);
-        }
-    }
-
-    //endregion
-
-    //region Better
-
-    @SuppressWarnings("UnusedDeclaration")
-    private void useBetterSessionListAdapter(List<Session> sessions) {
-        BetterSessionListAdapter listAdapter = (BetterSessionListAdapter)getListAdapter();
-
-        if (listAdapter == null){
-            BetterSessionListAdapter adapter = new BetterSessionListAdapter(getActivity(), sessions);
-            setListAdapter(adapter);
-        } else {
-            listAdapter.updateSessionList(sessions);
-        }
-    }
-
-    //endregion
-
-    //region Best
-
-    @SuppressWarnings("UnusedDeclaration")
-    private void useBestSessionListAdapter(List<Session> sessions) {
-        BestSessionListAdapter listAdapter = (BestSessionListAdapter)getListAdapter();
-
-        if (listAdapter == null){
-            BestSessionListAdapter adapter = new BestSessionListAdapter(getActivity(), sessions);
-            setListAdapter(adapter);
-        } else {
-            listAdapter.updateSessionList(sessions);
-        }
-    }
-
-    //endregion
-
-    //endregion
-
 }
