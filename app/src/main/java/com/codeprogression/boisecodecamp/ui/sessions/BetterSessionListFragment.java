@@ -10,8 +10,7 @@ import android.widget.ListView;
 import com.codeprogression.boisecodecamp.R;
 import com.codeprogression.boisecodecamp.api.CodeCampApiWrapper;
 import com.codeprogression.boisecodecamp.api.models.Session;
-import com.codeprogression.boisecodecamp.ui.sessions.adapters.BestSessionListAdapter;
-import com.codeprogression.boisecodecamp.ui.sessions.adapters.IListable;
+import com.codeprogression.boisecodecamp.ui.sessions.adapters.SessionListAdapter;
 import com.codeprogression.boisecodecamp.ui.core.BaseListFragment;
 
 import java.util.ArrayList;
@@ -44,10 +43,10 @@ public class BetterSessionListFragment extends BaseListFragment {
         api.getSessions(new CodeCampApiWrapper.SessionCallback() {
 
             public void success(List<Session> sessions) {
-                BestSessionListAdapter listAdapter = (BestSessionListAdapter) getListAdapter();
+                SessionListAdapter listAdapter = (SessionListAdapter) getListAdapter();
 
                 if (listAdapter == null) {
-                    BestSessionListAdapter adapter = new BestSessionListAdapter(getActivity(), sessions);
+                    SessionListAdapter adapter = new SessionListAdapter(getActivity(), sessions);
                     setListAdapter(adapter);
                 } else {
                     listAdapter.updateSessionList(sessions);
@@ -66,7 +65,7 @@ public class BetterSessionListFragment extends BaseListFragment {
         super.onListItemClick(l, v, position, id);
         Intent intent = new Intent(getActivity(), SessionDetailActivity.class);
         Bundle bundle = new Bundle();
-        bundle.putParcelableArrayList("SESSION_LIST", new ArrayList<>(((IListable) getListAdapter()).getList()));
+        bundle.putParcelableArrayList("SESSION_LIST", new ArrayList<>(((SessionListAdapter) getListAdapter()).getList()));
         bundle.putInt("POSITION", position);
         intent.putExtras(bundle);
         startActivity(intent);

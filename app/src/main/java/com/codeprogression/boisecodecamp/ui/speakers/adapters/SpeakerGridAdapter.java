@@ -6,7 +6,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 import com.codeprogression.boisecodecamp.api.models.Speaker;
-import com.codeprogression.boisecodecamp.ui.sessions.adapters.IListable;
 import com.codeprogression.boisecodecamp.ui.speakers.views.SpeakerGridItemView;
 
 import java.util.List;

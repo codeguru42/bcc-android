@@ -11,10 +11,10 @@ import com.codeprogression.boisecodecamp.ui.sessions.views.SessionListItemView;
 
 import java.util.List;
 
-public class BestSessionListAdapter extends ArrayAdapter<Session> implements IListable {
+public class SessionListAdapter extends ArrayAdapter<Session> implements IListable {
     private List<Session> list;
 
-    public BestSessionListAdapter(Context context, List<Session> list) {
+    public SessionListAdapter(Context context, List<Session> list) {
         super(context, R.layout.session_list_item_view, list);
         this.list = list;
     }

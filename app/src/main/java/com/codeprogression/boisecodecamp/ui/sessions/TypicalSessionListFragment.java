@@ -9,28 +9,18 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.codeprogression.boisecodecamp.R;
-import com.codeprogression.boisecodecamp.api.LanyrdApi;
 import com.codeprogression.boisecodecamp.api.models.Session;
 import com.codeprogression.boisecodecamp.api.models.SessionsResponse;
-import com.codeprogression.boisecodecamp.api.models.SpeakerResponse;
 import com.codeprogression.boisecodecamp.ui.core.BaseListFragment;
-import com.codeprogression.boisecodecamp.ui.sessions.adapters.BadSessionListAdapter;
-import com.codeprogression.boisecodecamp.ui.sessions.adapters.IListable;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.inject.Inject;
 
 import butterknife.ButterKnife;
 
