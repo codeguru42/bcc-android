@@ -1,8 +1,8 @@
 package com.codeprogression.boisecodecamp.ui.sessions;
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +22,9 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 import butterknife.ButterKnife;
+import retrofit.Callback;
+import retrofit.RetrofitError;
+import retrofit.client.Response;
 
 import static com.codeprogression.boisecodecamp.utils.LogUtils.makeLogTag;
 
@@ -50,13 +53,53 @@ public class SessionListFragment extends BaseListFragment {
     public void onResume() {
         super.onResume();
         if (getListAdapter() == null) {
-            new SessionBackgroundTask().execute((Void[]) null);
+            api.getSessions(new Callback<SessionsResponse>() {
+                @Override
+                public void success(SessionsResponse sessionsResponse, Response response) {
+                    if (isActivityDead()) return;
+                    handleSuccess(sessionsResponse.getSessions());
+                }
+
+                @Override
+                public void failure(RetrofitError error) {
+                    if (isActivityDead()) return;
+                    handleError();
+                }
+
+
+                private boolean isActivityDead() {
+                    FragmentActivity activity = getActivity();
+                    if (activity == null || activity.isFinishing()){
+                        return true;
+                    }
+                    return false;
+                }
+            });
+
         }
     }
 
     @Override
     public void onPause() {
         super.onPause();
+
+        /*
+            api.cancel not available on retrofit yet (planned for 2.0 release)
+         */
+    }
+
+    private void handleSuccess(List<Session> sessions) {
+        SessionListAdapter listAdapter = (SessionListAdapter) getListAdapter();
+
+        if (listAdapter == null) {
+            SessionListAdapter adapter = new SessionListAdapter(getActivity(), sessions);
+            setListAdapter(adapter);
+        } else {
+            listAdapter.updateSessionList(sessions);
+        }
+    }
+
+    private void handleError() {
     }
 
     @Override
@@ -70,53 +113,5 @@ public class SessionListFragment extends BaseListFragment {
         startActivity(intent);
     }
 
-    class SessionBackgroundTask extends AsyncTask<Void, Void, List<Session>> {
-
-        @Override
-        protected List<Session> doInBackground(Void... params) {
-
-            SessionsResponse sessionsResponse = api.getSessions();
-            List<Session> list = sessionsResponse.getSessions();
-            return list != null ? list : new ArrayList<Session>();
-        }
-
-        @Override
-        protected void onPostExecute(List<Session> sessions) {
-            super.onPostExecute(sessions);
-
-            SessionListAdapter listAdapter = (SessionListAdapter) getListAdapter();
-
-            if (listAdapter == null) {
-                SessionListAdapter adapter = new SessionListAdapter(getActivity(), sessions);
-                setListAdapter(adapter);
-            } else {
-                listAdapter.updateSessionList(sessions);
-            }
-        }
-    }
-
 }
 
-
-/*
-
-        FragmentActivity activity = getActivity();
-
-        LOGD(TAG, "Running onPostExecute for session list");
-        if (activity == null){
-            LOGD(TAG, "Activity is null");
-        } else {
-            LOGD(TAG, "Activity is " + (activity.isFinishing() ? "finishing" : "alive"));
-        }
-        if (activity == null || activity.isFinishing()){
-            LOGD(TAG, "ABORT! ABORT!");
-            return;
-        }
-
-        ---------------
-
-
-        LOGD(TAG, "Canceling background task FTW!");
-        sessionBackgroundTask.cancel(true);
-
- */
