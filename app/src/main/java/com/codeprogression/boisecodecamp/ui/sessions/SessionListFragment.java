@@ -3,7 +3,6 @@ package com.codeprogression.boisecodecamp.ui.sessions;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,16 +12,9 @@ import com.codeprogression.boisecodecamp.R;
 import com.codeprogression.boisecodecamp.api.LanyrdApi;
 import com.codeprogression.boisecodecamp.api.models.Session;
 import com.codeprogression.boisecodecamp.api.models.SessionsResponse;
-import com.codeprogression.boisecodecamp.core.AndroidModule;
 import com.codeprogression.boisecodecamp.ui.core.BaseListFragment;
 import com.codeprogression.boisecodecamp.ui.sessions.adapters.SessionListAdapter;
-import com.google.gson.FieldNamingPolicy;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,13 +23,12 @@ import javax.inject.Named;
 
 import butterknife.ButterKnife;
 
-import static com.codeprogression.boisecodecamp.utils.LogUtils.LOGD;
 import static com.codeprogression.boisecodecamp.utils.LogUtils.makeLogTag;
 
 public class SessionListFragment extends BaseListFragment {
 
+    @SuppressWarnings("UnusedDeclaration")
     public static final String TAG = makeLogTag(SessionListFragment.class);
-    private SessionBackgroundTask sessionBackgroundTask;
 
     @Inject
     @Named("MOCK")
@@ -59,8 +50,7 @@ public class SessionListFragment extends BaseListFragment {
     public void onResume() {
         super.onResume();
         if (getListAdapter() == null) {
-            sessionBackgroundTask = new SessionBackgroundTask();
-            sessionBackgroundTask.execute((Void[]) null);
+            new SessionBackgroundTask().execute((Void[]) null);
         }
     }
 

@@ -35,28 +35,30 @@ public class MockLanyrdClient extends ContextWrapper implements Client {
         String path = uri.getPath();
         if (path != null) {
             if (path.equalsIgnoreCase("/2014/bcc2014/schedule/b1200ddb9996154d.v1.json")) {
+//                makeItSlow();
                 responseString = ResourceUtils.loadFromResource(getResources(), R.raw.x_schedule);
 
             } else if (path.equalsIgnoreCase("/2014/bcc2014/speakers/b1200ddb9996154d.v1.json")) {
+//                makeItSlow();
                 responseString = ResourceUtils.loadFromResource(getResources(), R.raw.x_speakers);
             }
         }
 
-//        makeItSlow();
 
-        if (responseString.equals("")){
+        if (responseString.equals("")) {
             return new Response(request.getUrl(), 404, "NOT FOUND", Collections.EMPTY_LIST, new TypedByteArray("application/json", responseString.getBytes()));
-        } else{
+        } else {
             return new Response(request.getUrl(), 200, "SUCCESS", Collections.EMPTY_LIST, new TypedByteArray("application/json", responseString.getBytes()));
         }
 
     }
 
     @SuppressWarnings("UnusedDeclaration")
-    private void makeItSlow(){
+    private void makeItSlow() {
         try {
             Thread.sleep(10000);
-        } catch (InterruptedException ignore) { }
+        } catch (InterruptedException ignore) {
+        }
     }
 
 
