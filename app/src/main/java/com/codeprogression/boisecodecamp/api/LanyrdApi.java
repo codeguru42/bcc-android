@@ -12,6 +12,9 @@ public interface LanyrdApi {
     @GET("/2014/bcc2014/schedule/b1200ddb9996154d.v1.json")
     void getSessions(Callback<SessionsResponse> callback);
 
+    @GET("/2014/bcc2014/schedule/b1200ddb9996154d.v1.json")
+    SessionsResponse getSessions();
+
     @GET("/2014/bcc2014/speakers/b1200ddb9996154d.v1.json")
     void getSpeakers(Callback<SpeakerResponse> callback);
 }
