@@ -10,7 +10,7 @@ import com.codeprogression.boisecodecamp.ui.speakers.views.SpeakerGridItemView;
 
 import java.util.List;
 
-public class SpeakerGridAdapter extends BaseAdapter implements IListable {
+public class SpeakerGridAdapter extends BaseAdapter {
     private Context context;
     private List<Speaker> list;
 

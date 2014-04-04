@@ -3,13 +3,11 @@ package com.codeprogression.boisecodecamp.core;
 import android.content.Context;
 
 import com.codeprogression.boisecodecamp.api.CodeCampApiWrapper;
-import com.codeprogression.boisecodecamp.ui.sessions.BetterSessionListFragment;
 import com.codeprogression.boisecodecamp.ui.HomeFragment;
 import com.codeprogression.boisecodecamp.ui.MainActivity;
 import com.codeprogression.boisecodecamp.ui.sessions.SessionDetailActivity;
 import com.codeprogression.boisecodecamp.ui.sessions.SessionDetailFragment;
 import com.codeprogression.boisecodecamp.ui.sessions.SessionListFragment;
-import com.codeprogression.boisecodecamp.ui.sessions.TypicalSessionListFragment;
 import com.codeprogression.boisecodecamp.ui.speakers.SpeakerDetailActivity;
 import com.codeprogression.boisecodecamp.ui.speakers.SpeakerDetailFragment;
 import com.codeprogression.boisecodecamp.ui.speakers.SpeakerGridFragment;
@@ -36,8 +34,7 @@ import dagger.Provides;
                 SpeakerDetailActivity.class,
                 SpeakerDetailFragment.class,
 
-                BetterSessionListFragment.class,
-                TypicalSessionListFragment.class
+                SessionListFragment.class
         },
         addsTo = AndroidModule.class,
         library = true

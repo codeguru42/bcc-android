@@ -80,7 +80,7 @@ public class AndroidModule {
         }
 
         RestAdapter adapter = builder.setEndpoint("http://lanyrd.com")
-                .setLogLevel(BuildConfig.DEBUG ? RestAdapter.LogLevel.FULL : RestAdapter.LogLevel.NONE)
+                .setLogLevel(BuildConfig.DEBUG ? RestAdapter.LogLevel.BASIC : RestAdapter.LogLevel.NONE)
                 .setClient(new OkClient(okHttpClient))
                 .setConverter(getGsonConverter())
                 .build();
@@ -88,10 +88,13 @@ public class AndroidModule {
     }
 
     private Converter getGsonConverter() {
-        Gson gson = new GsonBuilder()
-                .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-                .create();
-        return new GsonConverter(gson);
+        return new GsonConverter(getGson());
+    }
+
+    public static Gson getGson() {
+        return new GsonBuilder()
+                    .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
+                    .create();
     }
 
 }
