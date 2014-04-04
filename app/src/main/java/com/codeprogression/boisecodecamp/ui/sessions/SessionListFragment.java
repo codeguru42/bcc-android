@@ -3,6 +3,7 @@ package com.codeprogression.boisecodecamp.ui.sessions;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,7 +27,13 @@ import java.util.List;
 
 import butterknife.ButterKnife;
 
+import static com.codeprogression.boisecodecamp.utils.LogUtils.LOGD;
+import static com.codeprogression.boisecodecamp.utils.LogUtils.makeLogTag;
+
 public class SessionListFragment extends BaseListFragment {
+
+    public static final String TAG = makeLogTag(SessionListFragment.class);
+    private SessionBackgroundTask sessionBackgroundTask;
 
     public static SessionListFragment newInstance() {
         return new SessionListFragment();
@@ -44,8 +51,14 @@ public class SessionListFragment extends BaseListFragment {
     public void onResume() {
         super.onResume();
         if (getListAdapter() == null){
-            new SessionBackgroundTask().execute((Void[])null);
+            sessionBackgroundTask = new SessionBackgroundTask();
+            sessionBackgroundTask.execute((Void[]) null);
         }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
     }
 
     @Override
@@ -97,3 +110,34 @@ public class SessionListFragment extends BaseListFragment {
     }
 
 }
+
+
+/*
+
+            try {
+                Thread.sleep(10000);
+            } catch (InterruptedException ignore) {}
+
+            ----------------
+
+
+            FragmentActivity activity = getActivity();
+
+            LOGD(TAG, "Running onPostExecute for session list");
+            if (activity == null){
+                LOGD(TAG, "Activity is null");
+            } else {
+                LOGD(TAG, "Activity is " + (activity.isFinishing() ? "finishing" : "alive"));
+            }
+            if (activity == null || activity.isFinishing()){
+                LOGD(TAG, "ABORT! ABORT!");
+                return;
+            }
+
+            ---------------
+
+
+        LOGD(TAG, "Canceling background task FTW!");
+        sessionBackgroundTask.cancel(true);
+
+ */
