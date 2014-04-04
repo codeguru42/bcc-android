@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 
 import butterknife.ButterKnife;
 import retrofit.Callback;
@@ -26,7 +27,7 @@ import retrofit.client.Response;
 
 public class SpeakerListFragment extends BaseListFragment {
 
-    @Inject LanyrdApi api;
+    @Inject @Named("MOCK") LanyrdApi api;
 
     public static SpeakerListFragment newInstance() {
         SpeakerListFragment fragment = new SpeakerListFragment();

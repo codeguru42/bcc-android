@@ -1,0 +1,780 @@
+
+{
+    "speakers": [
+        {
+            "bio": "<p>Director of Software Development at Unity Media Group</p>",
+            "web_url": "http://lanyrd.com/profile/chrisbrandsma/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/f6105248cd7bd9d11f2616db954ef8378575e4c3-s300.jpeg",
+            "name": "Chris Brandsma",
+            "elsewhere": [],
+            "role": "Director of Software Development at Unity Media Group",
+            "twitter": "@cwbrandsma",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/f6105248cd7bd9d11f2616db954ef8378575e4c3-s75.jpeg",
+            "speaker_bio": ""
+        },
+        {
+            "bio": "<p>Software Engineer, R&amp;D Manager</p>",
+            "web_url": "http://lanyrd.com/profile/jdmullin/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/71360b9b02819e23faccc40e90459782ae70c0bf-s300.png",
+            "name": "J.D. Mullin",
+            "elsewhere": [],
+            "role": "TSheets.com R&D Manager, Senior Software Engineer",
+            "twitter": "@jdmullin",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/71360b9b02819e23faccc40e90459782ae70c0bf-s75.png",
+            "speaker_bio": "<p>R&amp;D Manager and Senior Engineer at TSheets. Fifteen years of software development experience including positions at Extended Systems, Sybase and WhiteCloud Analytics. Passionate about software and learning. Created and organized a local program called CS Extras that helps college students interact with industry professionals.</p>"
+        },
+        {
+            "bio": "<p>CEO of River Moss Technologies. Avid coder, kayaker, snowboarder, and thrill seaker. Just your typical developer/adrenaline junkie.</p>",
+            "web_url": "http://lanyrd.com/profile/mike_d_moser/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/fd6ffb73525998ab909cd3cf61557c083b314ab1-s300.jpeg",
+            "name": "Mike Moser",
+            "elsewhere": [],
+            "role": "CEO of River Moss Technologies. Avid coder, kayaker, snowboarder, and thrill seaker. Just your typical developer/adrenaline junkie.",
+            "twitter": "@mike_d_moser",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/fd6ffb73525998ab909cd3cf61557c083b314ab1-s75.jpeg",
+            "speaker_bio": ""
+        },
+        {
+            "bio": "<p>Code lover.</p>",
+            "web_url": "http://lanyrd.com/profile/nickmar/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/5e6b39df61b077d289268d119d15c363180223ad-s300.jpeg",
+            "name": "Nick Martin",
+            "elsewhere": [],
+            "role": "Works on my machine!",
+            "twitter": "@NickMar",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/5e6b39df61b077d289268d119d15c363180223ad-s75.jpeg",
+            "speaker_bio": "<p>Software Engineer at RiverMoss Technologies. I&#39;m a nerd. I&#39;m a Dad.</p>"
+        },
+        {
+            "bio": "<p>Boise web software developer, internet marketer, husband, having fun outdoors and on the web</p>",
+            "web_url": "http://lanyrd.com/profile/jrzerr/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/bb0ba750f36d5d9e8f3cb276121f1fe0054f3916-s300.jpeg",
+            "name": "Jeremy Zerr",
+            "elsewhere": [
+                {
+                    "url": "https://plus.google.com/108959426484910393576"
+                },
+                {
+                    "url": "http://www.linkedin.com/in/jrzerr"
+                }
+            ],
+            "role": "Boise web software developer and entrepreneur.  Currently working on http://www.affiliatelinkr.com and doing freelance web development.",
+            "twitter": "@jrzerr",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/bb0ba750f36d5d9e8f3cb276121f1fe0054f3916-s75.jpeg",
+            "speaker_bio": "<p>I live in Boise and work as a freelance full-stack web developer.  Experience includes AngularJS, Drupal, jQuery, MySQL, D3.js, Google Chart Tools, Sass, PHP, Perl.</p>"
+        },
+        {
+            "bio": "<p>Husband, Father and Software Craftsman at @pluralsight. Co-founder Utah Software Craftsmanship @utahsc <a href=\"http://utahsc.org\" rel=\"nofollow\">http://utahsc.org</a></p>",
+            "web_url": "http://lanyrd.com/profile/mdclement/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/9ace241e7963ee32f6233a69431b4542b78e89de-s300.jpeg",
+            "name": "Mike Clement",
+            "elsewhere": [
+                {
+                    "url": "http://about.me/mdclement"
+                },
+                {
+                    "url": "http://blog.softwareontheside.com/"
+                }
+            ],
+            "role": "Husband, Father and Software Craftsman at @pluralsight. Co-founder Utah Software Craftsmanship @utahsc http://utahsc.org Organizer Agile Roots 2014",
+            "twitter": "@mdclement",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/9ace241e7963ee32f6233a69431b4542b78e89de-s75.jpeg",
+            "speaker_bio": "<p>I&#39;m a husband, father of four and currently a Senior Software Craftsman at Pluralsight. I&#39;ve worked at <a href=\"http://Ancestry.com\" rel=\"nofollow\">Ancestry.com</a>, Microsoft, Caselle and a few other small companies. I am a founding member and organizer of the Utah Software Craftsmanship group (<a href=\"http://utahsc.org\" rel=\"nofollow\">http://utahsc.org</a>). I blog at <a href=\"http://blog.softwareontheside.com/\" rel=\"nofollow\">http://blog.softwareontheside.com/</a> and you can find me on twitter at @mdclement.</p>"
+        },
+        {
+            "bio": "",
+            "web_url": "http://lanyrd.com/profile/glen-colby/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/6414a5e485fbd6d1c35f819b538eec0c13f97289-s300.jpeg",
+            "name": "Glen Colby",
+            "elsewhere": [],
+            "role": "Senior Software Engineer at Royal Jay",
+            "twitter": null,
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/6414a5e485fbd6d1c35f819b538eec0c13f97289-s75.jpeg",
+            "speaker_bio": "<p>Senior Developer at AgileFront -<br>\nCo-owner at Thud Games</p>"
+        },
+        {
+            "bio": "<p>What? I build websites at <a href=\"http://valice.com\" rel=\"nofollow\">http://valice.com</a></p>",
+            "web_url": "http://lanyrd.com/profile/andyharl/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/b586f6be4d84c6b85be3d84082ac5449df359c58-s300.jpeg",
+            "name": "Andy Harl",
+            "elsewhere": [],
+            "role": "Web designer, amateur food maker, husband, and father.",
+            "twitter": "@AndyHarl",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/b586f6be4d84c6b85be3d84082ac5449df359c58-s75.jpeg",
+            "speaker_bio": "<p>I am a web designer at the local hosting company, Valice. I design and build websites for small and medium size businesses. I am passionate about web technology and user experience design.</p>"
+        },
+        {
+            "bio": "<p>Code Foo at @uceem. Community Builder of @localmotionid. Mentor at @trybloc <a href=\"mailto:nickbender@gmail.com\">nickbender@gmail.com</a></p>",
+            "web_url": "http://lanyrd.com/profile/nickbender/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/377682f8a60cf2f8832bd99057e56b95701fbcc7-s300.jpeg",
+            "name": "Nick Bender",
+            "elsewhere": [],
+            "role": "Code Foo at @uceem. Community Builder of @localmotionid. Mentor at @trybloc nickbender@gmail.com",
+            "twitter": "@nickbender",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/377682f8a60cf2f8832bd99057e56b95701fbcc7-s75.jpeg",
+            "speaker_bio": ""
+        },
+        {
+            "bio": "",
+            "web_url": "http://lanyrd.com/profile/careydressler-7880/",
+            "image_300": "https://d3brtmsfoeeao4.cloudfront.net/img/icons/flatset/person-300x300.aae55363.png",
+            "name": "Jeremy Carey-Dressler",
+            "elsewhere": [],
+            "role": "",
+            "twitter": null,
+            "image_75": "https://d3brtmsfoeeao4.cloudfront.net/img/icons/flatset/person-75x75.dc1c8979.png",
+            "speaker_bio": "<p>Jeremy Carey-dressler (aka JCD) is an automation tester and toolsmith who currently works at Kount, a financial fraud detection company. He has been testing hardware, software and firmware across multiple industries for over 12 years, with a special focus in automation.  He continues to search for new ways to push the boundaries of automated testing in order to improve the craft.</p>"
+        },
+        {
+            "bio": "",
+            "web_url": "http://lanyrd.com/profile/stevesdevbox/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/5a01ec1d7d42e3df247d335fd95f600dd3d71793-s300.png",
+            "name": "Steve Reece",
+            "elsewhere": [],
+            "role": "",
+            "twitter": "@stevesdevbox",
+            "image_75": "https://s3.amazonaws.com/static.lanyrd.net/cropped-profile-photos/5a01ec1d7d42e3df247d335fd95f600dd3d71793-s75.png",
+            "speaker_bio": "<p>I am a presenter and software developer.  I have trained in security and have written internet facing applications for many years.</p>"
+        },
+        {
+            "bio": "<p>CEO @ <a href=\"http://NetCamps.com\" rel=\"nofollow\">http://NetCamps.com</a>. Love to coach football, teach skydiving, and nerd it up with Ruby on Rails.</p>",
+            "web_url": "http://lanyrd.com/profile/chrischattin/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/3ba887d3882c7d1524c9924879b68e35dd22833f-s300.jpeg",
+            "name": "Chris Chattin",
+            "elsewhere": [],
+            "role": "CEO/Janitor @ http://NetCamps.com. Love to coach football, teach skydiving, and nerd it up with Ruby on Rails.",
+            "twitter": "@ChrisChattin",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/3ba887d3882c7d1524c9924879b68e35dd22833f-s75.jpeg",
+            "speaker_bio": "<p>Self taught Rails developer.  CEO of NetCamps.  Creator of GiveStorm (successful exit last year).</p>"
+        },
+        {
+            "bio": "<p>Software Engineer at SAP in Boise, ID. C#/asp.net/javascript/html by day, beer geek by night.</p>",
+            "web_url": "http://lanyrd.com/profile/scottjeide/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/9aaf67a6f2a318432f3ea3971cf5b06395857583-s300.jpeg",
+            "name": "Scott Jeide",
+            "elsewhere": [],
+            "role": "Software Engineer at SAP in Boise, ID. C#/asp.net/javascript/html by day, beer geek by night.",
+            "twitter": "@scottjeide",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/9aaf67a6f2a318432f3ea3971cf5b06395857583-s75.jpeg",
+            "speaker_bio": "<p>I graduated from Montana State University in 1997 and have worked at Extended Systems, Sybase, Microsoft, and now SAP. I have been involved in many different development roles along the way such as writing network protocol stacks on embedded systems, PalmOS &amp; Windows CE apps, Windows PC-based synchronization applications, mobile synchronization servers, <a href=\"http://ASP.NET\" rel=\"nofollow\">ASP.NET</a> development for SharePoint, worked on the data analysis engine in MS Excel, and now back to mobile development on just about every platform around... I have also been in several team lead and architect roles along the way.</p>"
+        },
+        {
+            "bio": "<p>C# MVC App Dev...and connoisseur of new tech.</p>",
+            "web_url": "http://lanyrd.com/profile/adamclerk/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/11775d18c044cd84bd4a705b2353baa5cfebca04-s300.jpeg",
+            "name": "Adam Clark",
+            "elsewhere": [],
+            "role": "C# MVC App Dev...and connoisseur of new tech.",
+            "twitter": "@adamclerk",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/11775d18c044cd84bd4a705b2353baa5cfebca04-s75.jpeg",
+            "speaker_bio": ""
+        },
+        {
+            "bio": "",
+            "web_url": "http://lanyrd.com/profile/l-paul-verhage/",
+            "image_300": "https://d3brtmsfoeeao4.cloudfront.net/img/icons/flatset/person-300x300.aae55363.png",
+            "name": "L. Paul Verhage",
+            "elsewhere": [],
+            "role": "",
+            "twitter": null,
+            "image_75": "https://s3.amazonaws.com/static.lanyrd.net/img/icons/flatset/person-75x75.2efb8fae.png",
+            "speaker_bio": "<p>I&#39;m president of the Boise Robotics Group (the BoRG)</p>"
+        },
+        {
+            "bio": "",
+            "web_url": "http://lanyrd.com/profile/isaac-howard/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/389996e924a78384a6e1b771dea8a6b7395c9725-s300.jpeg",
+            "name": "Isaac Howard",
+            "elsewhere": [],
+            "role": "",
+            "twitter": null,
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/389996e924a78384a6e1b771dea8a6b7395c9725-s75.jpeg",
+            "speaker_bio": "<p>Isaac Howard currently works at Kount\u00ae, a financial fraud detection company. Where I play the part of QA Manager while subjugating the people that work under me with my iron fist. I started my career testing stuff in the military (with explosives) and transitioned to hardware, firmware, software for several small and large companies and finally settled into web applications with a small firm. I am constantly striving to find better ways to do everything.</p>"
+        },
+        {
+            "bio": "<p>Chief Software Gardener at Mojo Software Worx, .NET Developer, C# MVP, INETA Community Speaker, Member ComponentOne Speaker Bureau, Author, Geek.</p>",
+            "web_url": "http://lanyrd.com/profile/craigber/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/64a33a09695886df0a5ed8740f0a0f358719cdfa-s300.jpg",
+            "name": "Craig Berntson",
+            "elsewhere": [],
+            "role": "Chief Software Gardener at Mojo Software Worx, .NET Developer, C# MVP, INETA Community Speaker, Member ComponentOne Speaker Bureau, Author, Geek. ",
+            "twitter": "@craigber",
+            "image_75": "https://s3.amazonaws.com/static.lanyrd.net/cropped-profile-photos/64a33a09695886df0a5ed8740f0a0f358719cdfa-s75.jpg",
+            "speaker_bio": "<p>Craig is the Chief Software Gardener at Mojo Software Worx in Salt Lake City. He has a passion for community and helping other developers improve their skills and has spoken at developer events across the US, Canada, and Europe and is the co-author of &quot;Continuous Integration in .NET&quot; available from Manning. Craig has been named a Microsoft MVP every year since 1996. He is an INETA Community Speaker and a ComponentOne Community Influencer.</p>"
+        },
+        {
+            "bio": "<p>Professional Software Engineer</p>",
+            "web_url": "http://lanyrd.com/profile/travis-bretton/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/3d6d8df6c4eba71e3ef20042dfdaf0965cdd600c-s300.jpeg",
+            "name": "Travis Bretton",
+            "elsewhere": [],
+            "role": "Professional Software Engineer",
+            "twitter": "@IdaCoder",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/3d6d8df6c4eba71e3ef20042dfdaf0965cdd600c-s75.jpeg",
+            "speaker_bio": "<p>I am a software developer, a husband, a FOSS enthusiast, and the father of two incredibly gifted children. I love technology. I enjoy tinkering with the new and untried, and diving into the tried and true. I am currently a Software Engineer with Kount, Inc. in Boise, Idaho.</p>"
+        },
+        {
+            "bio": "<p>Software engineering researcher with a practical bent - <a href=\"http://bit.ly/SandoSearch\" rel=\"nofollow\">http://bit.ly/SandoSearch</a> + <a href=\"http://bit.ly/SrcMLNet\" rel=\"nofollow\">http://bit.ly/SrcMLNet</a></p>",
+            "web_url": "http://lanyrd.com/profile/davidcshepherd/",
+            "image_300": "https://pbs.twimg.com/profile_images/71290054/smallerDave_normal.jpg",
+            "name": "David Shepherd",
+            "elsewhere": [],
+            "role": "Software engineering researcher with a practical bent - http://bit.ly/SandoSearch + http://bit.ly/SrcMLNet",
+            "twitter": "@davidcshepherd",
+            "image_75": "https://pbs.twimg.com/profile_images/71290054/smallerDave_normal.jpg",
+            "speaker_bio": "<p>David Shepherd is a software tools researcher, turned professional tools developer, turned software tools researcher and open source contributor. Inspired by Andi Marcus&#39;s research on &quot;Google-ing source code&quot; he&#39;s recently spent his time developing Sando, a free open source search extension for Visual Studio with over 5000 downloads. You&#39;ll also find him evangelizing the merits of better code search tools at conferences like devLink. He lives and works in the RTP area where he leads ABB&#39;s Software Engineering Research Group.</p>"
+        },
+        {
+            "bio": "<p>IT Manager at Moffatt Thomas</p>",
+            "web_url": "http://lanyrd.com/profile/marshall-major/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/c1435354fbe409b9ab121925b446b8d14e4874bb-s300.jpeg",
+            "name": "Marshall Major",
+            "elsewhere": [],
+            "role": "IT Manager at Moffatt Thomas",
+            "twitter": null,
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/c1435354fbe409b9ab121925b446b8d14e4874bb-s75.jpeg",
+            "speaker_bio": ""
+        },
+        {
+            "bio": "<p>Husband, Father, Android Developer, Life-long Student of Random Stuff</p>",
+            "web_url": "http://lanyrd.com/profile/alphonzo79/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/634588dda6a30a761831ff0c0b35d11f4879cc2d-s300.jpeg",
+            "name": "Joe Rowley",
+            "elsewhere": [],
+            "role": "Husband, Father, Android Developer, Life-long Student of Random Stuff",
+            "twitter": "@alphonzo79",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/634588dda6a30a761831ff0c0b35d11f4879cc2d-s75.jpeg",
+            "speaker_bio": "<p>Joe started his second career in the valley as a test automation engineer after leaving behind a career in publishing, eventually moving into test automation for <a href=\"http://Bodybuilding.com\" rel=\"nofollow\">Bodybuilding.com</a>. After a year or so helping to build up regression testing for BBcom&#39;s online community, Bodyspace, he moved onto the newly resurrected mobile team there. He has been working since to help put out the Android version of a world-class app, which is being developed right here in the valley.</p>"
+        },
+        {
+            "bio": "<p>Man Among Engineers</p>",
+            "web_url": "http://lanyrd.com/profile/dustin-jordan/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/b641618d241e574dc9cd381c9b9f3df8563ea2ce-s300.jpeg",
+            "name": "Dustin Jordan",
+            "elsewhere": [],
+            "role": "Man Among Engineers",
+            "twitter": null,
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/b641618d241e574dc9cd381c9b9f3df8563ea2ce-s75.jpeg",
+            "speaker_bio": "<p>Dustin is a transplant to Idaho. He grew up near Houston, Texas, and can regale you with tales about his time spent working for NASA there. He has been in web development for more than 10 years, including local companies like Flat Planet, BlueLine Marketing, and <a href=\"http://Bodybuilding.com\" rel=\"nofollow\">Bodybuilding.com</a>. He is currently the engineering manager over BBcom&#39;s mobile native app teams and actively keeps his hands in the team&#39;s Android code. He has been instrumental in building the architecture for the app and for introducing significant performance improvements, as well as day-to-day feature work.</p>"
+        },
+        {
+            "bio": "<p>An Internet Tech Catalyst, Software Engineer &amp; Dynamic Spokeswoman-promoting Entreprenuership, Computing Technology &amp; Mobile Eco-System. Go-Giver, Wife, Mentor!</p>",
+            "web_url": "http://lanyrd.com/profile/leslieawright/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/f48ffcca2b78544a7726867e278895db6effe707-s300.jpeg",
+            "name": "Leslie A Wright",
+            "elsewhere": [],
+            "role": "An Internet Tech Catalyst, Software Engineer & Dynamic Spokeswoman-promoting Entreprenuership, Computing Technology & Mobile Eco-System. Go-Giver, Wife, Mentor!",
+            "twitter": "@leslieawright",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/f48ffcca2b78544a7726867e278895db6effe707-s75.jpeg",
+            "speaker_bio": ""
+        },
+        {
+            "bio": "<p>Board Chairman: Growth / Profitability / Life-Balance</p>",
+            "web_url": "http://lanyrd.com/profile/david-spann-vistage-idaho/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/d2a8a393beabe9bb479a793a2341b78215edc914-s300.jpeg",
+            "name": "David Spann",
+            "elsewhere": [],
+            "role": "Board Chairman: Growth / Profitability / Life-Balance",
+            "twitter": null,
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/d2a8a393beabe9bb479a793a2341b78215edc914-s75.jpeg",
+            "speaker_bio": "<p>&quot;Mr. Spann is the Vistage Chairman and coach for two Chief Executive advisory boards in the Boise, Idaho area; offering a highly confidential setting for 32 executives to test their strategies and receive feedback from a trusted peer-to-peer discussion.   The 17,000 worldwide membership is dedicated to helping CEOs/Presidents/Owners develop their leadership skills, make better decisions and build green and growing companies.</p>\n<p>As the President and CEO of his own consulting firm, Agile Adaptive Management, Inc., Firms who work with him learn to focus on delivering the most important and market differentiating products/services first, assure mission critical operations are improved to assure better efficiency and involves the customer/end-user throughout the process.<br>\n&quot;</p>"
+        },
+        {
+            "bio": "<p>Programmer for <a href=\"http://TSheets.com\" rel=\"nofollow\">http://TSheets.com</a>; avid wake surfer/boarder; father of two</p>",
+            "web_url": "http://lanyrd.com/profile/wsurfer/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/057e72e0193e2c4d5dbf009922e91ff4e6e8da2f-s300.jpeg",
+            "name": "Jared Cheney",
+            "elsewhere": [],
+            "role": "Programmer for http://TSheets.com; avid wake surfer/boarder; father of two",
+            "twitter": "@wsurfer",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/057e72e0193e2c4d5dbf009922e91ff4e6e8da2f-s75.jpeg",
+            "speaker_bio": "<p>Senior Software Engineer at <a href=\"http://TSheets.com\" rel=\"nofollow\">TSheets.com</a>.  17 years of system administration and software development experience including positions at CompuCom, CRI Advantage, and Hewlett Packard.  His background in systems and network architecture give him a unique perspective on how to build web applications that are efficient, reliable, and fast. Husband, father, avid wake surfer, sailor and comic book movie watcher.</p>"
+        },
+        {
+            "bio": "<p>Christian, Husband, Father, Agile Consultant, Learner, Connector, Relator, Teacher, Leader, George Fox, Calvary Chapel, US Agile Lead Wipro Consulting</p>",
+            "web_url": "http://lanyrd.com/profile/jasonleedean/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/6e263efb60e68c08c637e6c9a43c38535ad78ac7-s300.jpeg",
+            "name": "Jason Dean",
+            "elsewhere": [],
+            "role": "Christian, Husband, Father, Learner, Connector, Relator, Teacher, Leader, George Fox, Calvary Chapel, Agile Practice Manager @ Wipro Technologies",
+            "twitter": "@jasonleedean",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/6e263efb60e68c08c637e6c9a43c38535ad78ac7-s75.jpeg",
+            "speaker_bio": ""
+        },
+        {
+            "bio": "<p>Are you my mentor?</p>",
+            "web_url": "http://lanyrd.com/profile/davidadsit/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/1e1e325b476cae09d252ed0f82f086d7d83fbb01-s300.jpg",
+            "name": "David Adsit",
+            "elsewhere": [],
+            "role": "Are you my mentor?",
+            "twitter": "@davidadsit",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/1e1e325b476cae09d252ed0f82f086d7d83fbb01-s75.jpg",
+            "speaker_bio": "<p>I&#39;m one of the software craftsmen at Pluralsight. I have enjoyed programming since my 4th grade Apple Basic class.</p>"
+        },
+        {
+            "bio": "<p>Release Engineer at <a href=\"http://Bodybuilding.com\" rel=\"nofollow\">Bodybuilding.com</a></p>",
+            "web_url": "http://lanyrd.com/profile/patrickdlee/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/4fe8c148ae9e138a15d761fc7cd979e74014c1c6-s300.jpeg",
+            "name": "Patrick Lee",
+            "elsewhere": [],
+            "role": "Release Engineer at Bodybuilding.com",
+            "twitter": "@patrickdlee",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/4fe8c148ae9e138a15d761fc7cd979e74014c1c6-s75.jpeg",
+            "speaker_bio": "<p>I&#39;ve worked in Web application development for more than ten years including the past five at <a href=\"http://Bodybuilding.com\" rel=\"nofollow\">Bodybuilding.com</a>.  I&#39;m currently a release engineer with the goal of moving our organization forward in our processes and tools to where we can practice continuous delivery.</p>\n<p>I&#39;m also a grad student in computer science at Boise State.  My research is focused on static analysis and symbolic execution.</p>\n<p>Outside of work and school, my interests include DIY projects around the house, photography, and solving a variety of unusual Rubik&#39;s cubes.</p>"
+        },
+        {
+            "bio": "",
+            "web_url": "http://lanyrd.com/profile/zvickery/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/e5d8f75c4a9d3217f39ba0eaa874fe5b534bf9cc-s300.png",
+            "name": "Zach Vickery",
+            "elsewhere": [],
+            "role": "",
+            "twitter": "@zvickery",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/e5d8f75c4a9d3217f39ba0eaa874fe5b534bf9cc-s75.png",
+            "speaker_bio": ""
+        },
+        {
+            "bio": "<p>Founder and Designer at Legend. App designer, writer, traveler.</p>",
+            "web_url": "http://lanyrd.com/profile/nathanbarry/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/1d0930e2f3d082d21408f969e95eec1a8e232b37-s300.jpeg",
+            "name": "Nathan Barry",
+            "elsewhere": [],
+            "role": "Founder and Designer at ConvertKit. App designer, writer, traveler.",
+            "twitter": "@nathanbarry",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/1d0930e2f3d082d21408f969e95eec1a8e232b37-s75.jpeg",
+            "speaker_bio": "<p>Nathan is a software designer, author, and blogger. He is best known for his books The App Design Handbook, Authority, and Designing Web Applications.</p>"
+        },
+        {
+            "bio": "",
+            "web_url": "http://lanyrd.com/profile/fwillerup/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/96977a238d61125618fa5a1354db0ef1f908e731-s300.jpeg",
+            "name": "Fred Willerup",
+            "elsewhere": [],
+            "role": "",
+            "twitter": "@fwillerup",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/96977a238d61125618fa5a1354db0ef1f908e731-s75.jpeg",
+            "speaker_bio": "<p>Tech lead at Healthwise working on interactive products that make you healthy! Back-end, front-end, some mobile, and drawing on the whiteboard a lot.</p>"
+        },
+        {
+            "bio": "",
+            "web_url": "http://lanyrd.com/profile/superdav42/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/6a83780906992e8fd6e93ff99e15e5ece2eab1c7-s300.png",
+            "name": "David Stone",
+            "elsewhere": [],
+            "role": "",
+            "twitter": "@superdav42",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/6a83780906992e8fd6e93ff99e15e5ece2eab1c7-s75.png",
+            "speaker_bio": "<p>Web developer for Cbs Interactive on the <a href=\"http://Gamespot.com\" rel=\"nofollow\">Gamespot.com</a> team. Native Idahoan, husband, father of 3.</p>"
+        },
+        {
+            "bio": "<p><a href=\"http://www.codeprogression.com\" rel=\"nofollow\">http://www.codeprogression.com</a></p>",
+            "web_url": "http://lanyrd.com/profile/codeprogression/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/7e80761fc586b98d76a26954202feac32fc36204-s300.jpeg",
+            "name": "Richard Cirerol",
+            "elsewhere": [
+                {
+                    "url": "http://www.codeprogression.com/"
+                },
+                {
+                    "url": "http://elegantcode.com/about/richard-cirerol"
+                }
+            ],
+            "role": "http://www.codeprogression.com",
+            "twitter": "@codeprogression",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/7e80761fc586b98d76a26954202feac32fc36204-s75.jpeg",
+            "speaker_bio": "<p>Sr. Software Developer at Vertigo Software (<a href=\"http://vertigo.com\" rel=\"nofollow\">http://vertigo.com</a>) and Pluralsight author.</p>"
+        },
+        {
+            "bio": "<p>Coder and wanna be ultra runner living and geekin&#39; out in Boise, Idaho</p>",
+            "web_url": "http://lanyrd.com/profile/andrewhanson/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/92f1636f250ceb9f8f0d905d317e92989fc1b515-s300.jpeg",
+            "name": "Andrew Hanson",
+            "elsewhere": [],
+            "role": "Father, believer, coder and ultra runner living and geekin' out in Boise, Idaho",
+            "twitter": "@andrewhanson",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/92f1636f250ceb9f8f0d905d317e92989fc1b515-s75.jpeg",
+            "speaker_bio": "<p>Andrew is a Husband, Father, Coder, Ultra Runner and Principal Consultant @ Coding Inertia</p>\n<p>He has been a professional coder for over 15 years and enjoys all programming all things web</p>"
+        },
+        {
+            "bio": "<p>Microsoft AzureCAT PM #MSBI #BigData #Hadoop #Hive #HDInsight #SQL #AzureCAT #SQLCAT #Boise. <br>\nNon-work tweets are on @CindyGross.</p>",
+            "web_url": "http://lanyrd.com/profile/cindygross/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/98872efec146fb210a46b6aa46f608f6ab1298d1-s300.jpeg",
+            "name": "Cindy Gross",
+            "elsewhere": [],
+            "role": "Microsoft AzureCAT PM #WIT #MSBI #BigData #Hadoop #Hive #HDInsight #SQL #AzureCAT #SQLCAT #Boise. Non-work tweets are on @CindyGross.",
+            "twitter": "@SQLCindy",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/98872efec146fb210a46b6aa46f608f6ab1298d1-s75.jpeg",
+            "speaker_bio": "<p>Cindy Gross (@SQLCindy) is a member of the Microsoft Azure Customer Advisory Team (AzureCAT), where she works with Microsoft Business Intelligence, SQL Server, Hadoop, and Hive to make data more accessible to decision makers and generate more business value. She has extensive data platform experience, with roles that span engineering and direct customer engagement, and was honored to earn the title of SQL Server 2008 Microsoft Certified Master. As an active member of the technical community, she regularly speaks at local and national events and contributes to whitepapers, blogs, technical articles, and books.</p>"
+        },
+        {
+            "bio": "<p>Sr. Software Engineer</p>",
+            "web_url": "http://lanyrd.com/profile/jim-hoffman/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/ab57dd9a71e24a3adec49e655625e539884c44bf-s300.jpeg",
+            "name": "Jim Hoffman",
+            "elsewhere": [],
+            "role": "Sr. Software Engineer",
+            "twitter": null,
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/ab57dd9a71e24a3adec49e655625e539884c44bf-s75.jpeg",
+            "speaker_bio": "<p>Senior level software engineer with project management experience. I usually work on the &quot;hard stuff&quot;: J2EE, C++, Web Services, multi-threaded applications. I have a wide array of experiences in various technologies: C++, .net, java, j2ee, win32 api, sql, UML, etc... I am interested in creating new solutions to difficult problems.</p>"
+        },
+        {
+            "bio": "<p>Software Developer at Clearwater Analytics</p>",
+            "web_url": "http://lanyrd.com/profile/phillip-hayward/",
+            "image_300": "https://d3brtmsfoeeao4.cloudfront.net/img/icons/flatset/person-300x300.aae55363.png",
+            "name": "Phillip Hayward",
+            "elsewhere": [],
+            "role": "Software Developer at Clearwater Analytics",
+            "twitter": null,
+            "image_75": "https://d3brtmsfoeeao4.cloudfront.net/img/icons/flatset/person-75x75.dc1c8979.png",
+            "speaker_bio": "<p>My first program was a rogue-style game written in Turbo Pascal.  Since then I&#39;ve branched out, with professional experience in Java, HTML5/JavaScript, Objective C, C#, PHP and Delphi.</p>\n<p>I started organizing small, informal robotics competitions about a year ago to spur myself into getting more involved with robotics.  It&#39;s been a fun year, even though I usually don&#39;t win.</p>"
+        },
+        {
+            "bio": "<p>Process Lead at Pro 119 Marketing, Manager at Collision Platforms, and Code-Nerd</p>",
+            "web_url": "http://lanyrd.com/profile/pro119marketing-9434/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/4e379088e13c486089cbbebceaa145bb4d1eab5e-s300.jpeg",
+            "name": "Nicolas Wynkoop",
+            "elsewhere": [
+                {
+                    "url": "http://tinyurl.com/ProSocialHub"
+                },
+                {
+                    "url": "http://www.pro119marketing.com/social-media/twitter/boise-code-camp-2013-live-tweeting/"
+                }
+            ],
+            "role": "Process Lead at Pro 119 Marketing, Manager at Collision Platforms, and Code-Nerd",
+            "twitter": "@NickAtPro119",
+            "image_75": "https://s3.amazonaws.com/static.lanyrd.net/cropped-profile-photos/4e379088e13c486089cbbebceaa145bb4d1eab5e-s75.jpeg",
+            "speaker_bio": "<p>Partner and Process Lead at Pro 119 Marketing, Manager at Collision Platforms, and Code-Nerd.<br>\nFrom a developer who&#39;s bachelors and masters are in Communication, and who now focuses largely on business development at a marketing firm while still keeping his code skills sharp, you will hear multiple angles on the industry. Whether as freelancer or team player in a huge organization you&#39;ll walk away with a new mindset toward your projects from the process to the detail levels.</p>\n<p>Pro 119 is a &quot;marketing wholesaler&quot;, focusing on partnering with other web and marketing companies building valuable partnerships in web marketing through long-term relationships, authentic and open communication, and collaborative approaches.</p>\n<p>As &quot;Process Lead&quot;, I help design workflow, project, and business processes, focusing on the high-level goals, low-level tasks, and everything in between. For our company, this means I look at what we are becoming and the most effective and innovative ways to get there. For clients, I help you name what you are trying to do, see what is achievable for your organization, and take the day to day actions which will lead to success in these goals.</p>"
+        },
+        {
+            "bio": "",
+            "web_url": "http://lanyrd.com/profile/dillon-woods/",
+            "image_300": "https://d3brtmsfoeeao4.cloudfront.net/img/icons/flatset/person-300x300.aae55363.png",
+            "name": "Dillon Woods",
+            "elsewhere": [],
+            "role": "",
+            "twitter": null,
+            "image_75": "https://m3-s.licdn.com/mpr/mprx/0__gnH4M_q8hiI7JpuDVqc4R-XCLkUf0puTyCB4Rhqg6KwrUI2fUQXnUNVuSXku4j8CYN9cyOHajJX",
+            "speaker_bio": "<p>Technologist with a unique insight into the big data industry from working with dozens of data-centric companies to evaluate and improve their data management processes and infrastructure. Expertise in implementing a wide variety of hardware and software solutions for data processing and analytics, as well as experience in building complex, custom solutions.</p>"
+        },
+        {
+            "bio": "<p>automation coding with only a *little* duct tape, epoxy, and string...</p>",
+            "web_url": "http://lanyrd.com/profile/aaron-backer/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/2c48bf26079a4d1e457de1555a0a69629c7b9cb1-s300.png",
+            "name": "Aaron Backer",
+            "elsewhere": [],
+            "role": "automation coding with only a *little* duct tape, epoxy, and string...",
+            "twitter": null,
+            "image_75": "https://s3.amazonaws.com/static.lanyrd.net/cropped-profile-photos/2c48bf26079a4d1e457de1555a0a69629c7b9cb1-s75.png",
+            "speaker_bio": "<p>incorrigible QA engineer that happens to code.  tool-maker that loves automation because it&#39;s a big, shiny tool that never gets old.</p>"
+        },
+        {
+            "bio": "<p>Software Engineer at FieldSync Mobile Solutions</p>",
+            "web_url": "http://lanyrd.com/profile/ryan-thompson/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/dd29f4d6383c3bb9d589f9156b5457d720585439-s300.jpeg",
+            "name": "Ryan Thompson",
+            "elsewhere": [],
+            "role": "Software Engineer at FieldSync Mobile Solutions",
+            "twitter": null,
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/dd29f4d6383c3bb9d589f9156b5457d720585439-s75.jpeg",
+            "speaker_bio": "<p>Ryan Thompson is a software engineer with FieldSync Mobile Solutions. In the past four years, he has focused on writing software for mobile and embedded devices. He has worked on projects ranging from cross-platform native mobile development to GPS and inertial tracking collars for free-range cattle.</p>\n<p>Ryan graduated cum laude in Electrical and Computer Engineering at Boise State University in 2012. He was the winner of the 2012 IEEE Region 6 NE Micromouse competition, and was selected as a student guest presenter at the 2012 Capstone Design Conference at the University of Illinois.</p>\n<p>Ryan lives in Boise, ID with his wife, Amber. When not working, Ryan enjoys playing board games and likes to model architecture in LEGO bricks.</p>"
+        },
+        {
+            "bio": "",
+            "web_url": null,
+            "image_300": "https://d3brtmsfoeeao4.cloudfront.net/img/icons/flatset/person-300x300.aae55363.png",
+            "name": "Ole Dam",
+            "elsewhere": [],
+            "role": null,
+            "twitter": null,
+            "image_75": "https://d3brtmsfoeeao4.cloudfront.net/img/icons/flatset/person-75x75.dc1c8979.png",
+            "speaker_bio": "<p>Prior to starting Ole Dam &amp; Associates, a global operations consulting firm, Ole was EVP of The Antioch Company, a Direct Sales Holding Company, which he grew to $450 million in sales. He is an expert in Lean Operations and has trained numerous class A operations teams and successful leaders on four continents. Ole earned a BS in Manufacturing Engineering from Copenhagen Polytechnic, a BS in Operations Management from Cal. State, LA, and an MBA from Thunderbird School of International Management.</p>"
+        },
+        {
+            "bio": "<p>Web developer, artist: from Montana.</p>",
+            "web_url": "http://lanyrd.com/profile/kellypacker/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/60212474d6bd5176762c2e5615e096ef3dadc756-s300.jpeg",
+            "name": "Kelly Packer",
+            "elsewhere": [
+                {
+                    "url": "http://www.creativesoapbox.com/about"
+                }
+            ],
+            "role": "Web developer, artist: from Montana.",
+            "twitter": "@kellypacker",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/60212474d6bd5176762c2e5615e096ef3dadc756-s75.jpeg",
+            "speaker_bio": "<p>I am front-end web developing at Creative Soapbox. I love to create applications powered by the likes of Javascript, Backbone.js, HTML5 Canvas, node.js and Ruby on Rails.</p>\n<p>I am also an artist. I co-founded Enso Artspace, an artist collective with an exhibition space located in Garden City, Idaho.</p>"
+        },
+        {
+            "bio": "<p>Senior Web Developer at Propeople</p>",
+            "web_url": "http://lanyrd.com/profile/garrett-albright/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/f9bce6f0a98bd23124896176318110d03c8767d3-s300.jpeg",
+            "name": "Garrett Albright",
+            "elsewhere": [],
+            "role": "Senior Web Developer at Propeople",
+            "twitter": null,
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/f9bce6f0a98bd23124896176318110d03c8767d3-s75.jpeg",
+            "speaker_bio": "<p>Professional web developer for over 7 years, mostly with the Drupal CMS/framework; hobbyist for long before that.</p>"
+        },
+        {
+            "bio": "",
+            "web_url": null,
+            "image_300": "https://d3brtmsfoeeao4.cloudfront.net/img/icons/flatset/person-300x300.aae55363.png",
+            "name": "Tim Rogers",
+            "elsewhere": [],
+            "role": null,
+            "twitter": null,
+            "image_75": "https://d3brtmsfoeeao4.cloudfront.net/img/icons/flatset/person-75x75.dc1c8979.png",
+            "speaker_bio": "<p>25 years loving the IT industry.  Started with networking in the early days, but found a greater joy in software development with a special passion for databases.  Currently a development DBA for Clearwater Analytics.</p>"
+        },
+        {
+            "bio": "<p>Web App Dev, Snow Boarder, Mountain Biker, Rubyist, Boise State Bronco, Jeeper wannabe</p>",
+            "web_url": "http://lanyrd.com/profile/justinbkay/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/adc00ab60a4d6d60dc0aa0b6b023210816531207-s300.jpeg",
+            "name": "Justin B. Kay",
+            "elsewhere": [],
+            "role": "Web App Dev, Snow Boarder, Mountain Biker, Rubyist, Javascript dabler, Boise State Bronco, Jeeper wannabe",
+            "twitter": "@justinbkay",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/adc00ab60a4d6d60dc0aa0b6b023210816531207-s75.jpeg",
+            "speaker_bio": "<p>A resident of Kuna, Idaho for the past 14 years.  I received an accounting degree from Boise State University and later an NTCOMM degree from Boise State as well.  I started programming with PHP and later ColdFusion.  I&#39;ve been writing Ruby on Rails for the past 7 years.  Lately I&#39;ve been learning more about the front end and what JavaScript can do for my web applications.</p>"
+        },
+        {
+            "bio": "<p>Head of Software Development at Declara</p>",
+            "web_url": "http://lanyrd.com/profile/clay-teeter/",
+            "image_300": "https://d3brtmsfoeeao4.cloudfront.net/img/icons/flatset/person-300x300.aae55363.png",
+            "name": "Clay Teeter",
+            "elsewhere": [],
+            "role": "Head of Software Development at Declara",
+            "twitter": null,
+            "image_75": "https://d3brtmsfoeeao4.cloudfront.net/img/icons/flatset/person-75x75.dc1c8979.png",
+            "speaker_bio": "<p>Clay Teeter is currently the Head of Software Development at <a href=\"http://Declara.com\" rel=\"nofollow\">Declara.com</a>.</p>"
+        },
+        {
+            "bio": "<p>Senior DBA at Micron Technology</p>",
+            "web_url": "http://lanyrd.com/profile/paul-ou-yang/",
+            "image_300": "https://d3brtmsfoeeao4.cloudfront.net/img/icons/flatset/person-300x300.aae55363.png",
+            "name": "Paul Ou Yang",
+            "elsewhere": [],
+            "role": "Senior DBA at Micron Technology",
+            "twitter": null,
+            "image_75": "https://d3brtmsfoeeao4.cloudfront.net/img/icons/flatset/person-75x75.dc1c8979.png",
+            "speaker_bio": "<p>Paul is a Senior Database Administrator at Micron Technology Inc. and a Microsoft Certified Master in SQL 2008.</p>"
+        },
+        {
+            "bio": "<p>Internet!</p>",
+            "web_url": "http://lanyrd.com/profile/scott_sword/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/156a1cb3176bdfa3d1e9c6d13a2c3710eb07548d-s300.jpeg",
+            "name": "Scott Sword",
+            "elsewhere": [],
+            "role": "Internet!",
+            "twitter": "@scott_sword",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/156a1cb3176bdfa3d1e9c6d13a2c3710eb07548d-s75.jpeg",
+            "speaker_bio": "<p>Boise native/web developer. I was a an Interactive Developer at Balihoo for almost three years and now I&#39;m a Client Side Engineer at <a href=\"http://Bodybuilding.com\" rel=\"nofollow\">Bodybuilding.com</a>.</p>"
+        },
+        {
+            "bio": "",
+            "web_url": "http://lanyrd.com/profile/douglasjreece/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/af90a5dc87a0e2658ee5762a042128b8bd171239-s300.jpeg",
+            "name": "Doug Reece",
+            "elsewhere": [],
+            "role": "",
+            "twitter": "@douglasjreece",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/af90a5dc87a0e2658ee5762a042128b8bd171239-s75.jpeg",
+            "speaker_bio": "<p>President, R-Technics, Inc., developer of multimedia presentation software. Recent founder of a local robotics club preparing kids to compete in FIRST LEGO League competitions.</p>"
+        },
+        {
+            "bio": "<p>Best-Selling Author, Speaker, Community Builder, Coach, Marketing and Promotions Educator driven by the desire to help people live a joy filled/abundant life.</p>",
+            "web_url": "http://lanyrd.com/profile/philprodromos/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/b076bc8c4928f0572a0629d5556e813c3d4f7114-s300.jpeg",
+            "name": "Philip D. Bennett",
+            "elsewhere": [
+                {
+                    "url": "http://www.prodromosmarketing.com/marketing-seminars.php"
+                },
+                {
+                    "url": "http://www.linkedin.com/pub/philip-bennett/55/278/a59/"
+                }
+            ],
+            "role": "Best-Selling Author, Speaker, Community Builder, Coach, Marketing and Promotions Educator driven by the desire to help people live a joy filled/abundant life.",
+            "twitter": "@PhilProdromos",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/b076bc8c4928f0572a0629d5556e813c3d4f7114-s75.jpeg",
+            "speaker_bio": "<p>Best selling author 2011 Amazon Direct response category<br>\nListed on Americas Premier Experts<br>\nFounder/CEO of two tech platforms and an incubator for early stage start-up and solopreneur looking to collaborate. <br>\nFor over 25 years Phil has been contributing to a better way of doing it. As a father of three amazing children; a recognized leader in retail management, sales, and marketing; an entrepreneur; developer; Bestselling Author; speaker; missionary; and volunteer, Phil has been able to use his diverse journey both professionally and personally to achieve expert status in life and people. This has ultimately landed him with a passion for business, personal growth, and success as an entrepreneur. For the last 11 years he has run as many as 6 service companies at one time and helped many others with market positioning, branding, and gaining the freedom to live a joy filled abundant life outside of the office. Phil is passionate about life and sharing his experience in human performance, human behavior, and how each apply to your business and, more importantly, to your life and relationships.</p>"
+        },
+        {
+            "bio": "<p>Christian, Husband, Dad, Biker, Marine Corps Veteran, Attend Common Ground Biker Church. At work I&#39;m a .NET, WPF, Prism fanatic.</p>",
+            "web_url": "http://lanyrd.com/profile/kdawg02/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/8f2412a7f172bc741d577905bb3628c0401b5f98-s300.jpeg",
+            "name": "Karl Shifflett",
+            "elsewhere": [],
+            "role": "WPF, Prism fanatic.",
+            "twitter": "@kdawg02",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/8f2412a7f172bc741d577905bb3628c0401b5f98-s75.jpeg",
+            "speaker_bio": "<p>.NET, WPF Prism fanatic. After I left the Marine Corps I became a developer in 1989.  Programmed larges systems on VAX/MVS, DOS, and Windows platforms.</p>\n<p>All of my systems employed some form of code generation. Today I use .NET T4 as my code generation API.</p>"
+        },
+        {
+            "bio": "<p>Director of Project Management at MobileDataForce</p>",
+            "web_url": "http://lanyrd.com/profile/erin-pelly-hutchison-pmpcsm/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/fd034a14c34a06c8fc1974ddc19fe505963049e5-s300.jpeg",
+            "name": "Erin Hutchison, PMP,CSM",
+            "elsewhere": [],
+            "role": "Director of Project Management at FieldSync",
+            "twitter": null,
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/fd034a14c34a06c8fc1974ddc19fe505963049e5-s75.jpeg",
+            "speaker_bio": ""
+        },
+        {
+            "bio": "<p>CTO at GoGo Labs</p>",
+            "web_url": "http://lanyrd.com/profile/richard-newman/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/d4cf71cc5fc8739b7d1d8b98c0dc3ed0af8ddbbf-s300.jpeg",
+            "name": "Richard Newman",
+            "elsewhere": [],
+            "role": "CTO at GoGo Labs",
+            "twitter": null,
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/d4cf71cc5fc8739b7d1d8b98c0dc3ed0af8ddbbf-s75.jpeg",
+            "speaker_bio": ""
+        },
+        {
+            "bio": "",
+            "web_url": "http://lanyrd.com/profile/daleanson/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/e1fc87901b76ae35e02a760a382893f2ef6412fb-s300.png",
+            "name": "Dale Anson",
+            "elsewhere": [],
+            "role": "",
+            "twitter": "@daleanson",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/e1fc87901b76ae35e02a760a382893f2ef6412fb-s75.png",
+            "speaker_bio": "<p>Development Center Lead for the Boise Development Center afor Acquity Group, recently acquired by Accenture. 20+ years of experience in desktop and web application development. I&#39;ve recently stepped into the fascinating world of Arduino, where coding skills meet customizable hardware.</p>"
+        },
+        {
+            "bio": "<p>When the going gets tough, the tough get a mop and bucket!</p>",
+            "web_url": "http://lanyrd.com/profile/bob_the_janitor/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/11171e28a538a277a4fd8b58ee766321c5827c9e-s300.jpeg",
+            "name": "Richard Clements",
+            "elsewhere": [],
+            "role": "When the going gets tough, the tough get a mop and bucket!",
+            "twitter": "@bob_the_janitor",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/11171e28a538a277a4fd8b58ee766321c5827c9e-s75.jpeg",
+            "speaker_bio": "<p>I&#39;m a Software Developer with over 12 years in the industry, primarily working with web based enterprise development. A strong proponent of agile development and software craftsmanship. Check out my blog at <a href=\"http://bobthejanitor.org/\" rel=\"nofollow\">http://bobthejanitor.org/</a></p>"
+        },
+        {
+            "bio": "<p>DotNetRocks, TheTabletShow and RunAs Radio... what&#39;s wrong with making 200+ podcasts a year?</p>",
+            "web_url": "http://lanyrd.com/profile/richcampbell/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/afaf2c399a0bc9ed2db6c2ec9883a44aac191d3e-s300.jpeg",
+            "name": "Richard Campbell",
+            "elsewhere": [
+                {
+                    "url": "http://twitter.com/richcampbell"
+                },
+                {
+                    "url": "http://www.linkedin.com/pub/richard-campbell/0/37a/642"
+                },
+                {
+                    "url": "https://www.facebook.com/richard.campbell"
+                }
+            ],
+            "role": "DotNetRocks, TheTabletShow and RunAs Radio... what's wrong with making 200+ podcasts a year?",
+            "twitter": "@richcampbell",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/afaf2c399a0bc9ed2db6c2ec9883a44aac191d3e-s75.jpeg",
+            "speaker_bio": ""
+        },
+        {
+            "bio": "<p>QA Manager at Healthwise</p>",
+            "web_url": "http://lanyrd.com/profile/scott-schimanski/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/6dc1698c326d8ba2a73afbab541ae07b25e73009-s300.jpeg",
+            "name": "Scott Schimanski",
+            "elsewhere": [],
+            "role": "QA Manager at Healthwise",
+            "twitter": null,
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/6dc1698c326d8ba2a73afbab541ae07b25e73009-s75.jpeg",
+            "speaker_bio": ""
+        },
+        {
+            "bio": "<p>XAML Product Manager for @Infragistics | Pluralsight Technical Contributor | WPF | Silverlight | Prism | Extended WPF Toolkit Author | Host of @XamlTV</p>",
+            "web_url": "http://lanyrd.com/profile/brianlagunas/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/8bd71e1bf15b26d97affb7d7a7e727370e03e0fc-s300.jpeg",
+            "name": "Brian Lagunas",
+            "elsewhere": [],
+            "role": "XAML Product Manager for Infragistics | Microsoft MVP | Microsoft P&P Champ | Pluralsight Author",
+            "twitter": "@brianlagunas",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/8bd71e1bf15b26d97affb7d7a7e727370e03e0fc-s75.jpeg",
+            "speaker_bio": ""
+        },
+        {
+            "bio": "<p>Software Engineer at Clearwater Analytics</p>",
+            "web_url": "http://lanyrd.com/profile/sam-baird/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/7dc0f71929ab01f1ddc3024cf922b3190eb8c238-s300.jpeg",
+            "name": "Sam Baird",
+            "elsewhere": [],
+            "role": "Software Engineer at Clearwater Analytics",
+            "twitter": null,
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/7dc0f71929ab01f1ddc3024cf922b3190eb8c238-s75.jpeg",
+            "speaker_bio": "<p>I received my Bachelors in Computer Science from Brigham Young University, and my Masters in Computer Science from the University of Utah. I&#39;ve worked for the last 6 years at Clearwater Analytics as a software developer, and am currently a division manager.</p>"
+        },
+        {
+            "bio": "<p>Proto-mathematician, budding computer scientist, cyclist at heart.  I love discovering through the learning process. Intern at WhiteCloud Analytics.</p>",
+            "web_url": "http://lanyrd.com/profile/blakedietz/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/5103067f5ffa4cf58d1dbbbdebc7dfe4d4873b19-s300.jpeg",
+            "name": "Blake Dietz",
+            "elsewhere": [],
+            "role": "Proto-mathematician, budding computer scientist, cyclist at heart.  I love discovering through the learning process. Intern at WhiteCloud Analytics.",
+            "twitter": "@DietzTweetz",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/5103067f5ffa4cf58d1dbbbdebc7dfe4d4873b19-s75.jpeg",
+            "speaker_bio": ""
+        },
+        {
+            "bio": "<p>Developer Evangelist at Microsoft. Working on all things Cloud.</p>",
+            "web_url": "http://lanyrd.com/profile/brunoterkaly/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/b0cc54bc27ff3506613f9ce309bd4adb690952f4-s300.jpg",
+            "name": "Bruno Terkaly",
+            "elsewhere": [],
+            "role": "Principal Technical Evangelist - Microsoft",
+            "twitter": "@brunoterkaly",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/b0cc54bc27ff3506613f9ce309bd4adb690952f4-s75.jpg",
+            "speaker_bio": "<p>During my 10 year career at Microsoft, I&#39;ve worked with countless customers, providing services such as low-level troubleshooting scenarios, live and post-mortem debugging, on-the-fly application design and code reviews, performance tuning (IIS, SQL Server, .NET), application stability, porting / migration assistance, general development consulting. I have advised numerous CTO\u2019s and CIO\u2019s over the years about the appropriateness of various software technologies. I am a prolific blogger at: <a href=\"http://blogs.msdn.com/brunoterkaly\" rel=\"nofollow\">http://blogs.msdn.com/brunoterkaly</a>. I\u2019ve been on TV several times, as well as radio, newspaper and other media. I have also a columnist for the industry leading software trade journal called MSDN Magazine. <a href=\"http://msdn.microsoft.com/en-us/magazine/ee532098.aspx?sdmr=BrunoTerkaly&amp;sdmi=authors\" rel=\"nofollow\">http://msdn.microsoft.com/en-us/...</a> More recently, my team placed 3rd in the most recent Tech Crunch Disrupt Hackathon 2013. Finally, I have some popular apps I have authored in the Windows Store.</p>"
+        },
+        {
+            "bio": "<p>@TheScottNichols</p>",
+            "web_url": "http://lanyrd.com/profile/scott-nichols/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/e6a691b7fd8f054350b2838805f82b0b510416bf-s300.png",
+            "name": "Scott Nichols",
+            "elsewhere": [],
+            "role": "@TheScottNichols",
+            "twitter": "@TheScottNichols",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/e6a691b7fd8f054350b2838805f82b0b510416bf-s75.png",
+            "speaker_bio": ""
+        },
+        {
+            "bio": "<p>Developer Evangelist for Embarcadero Technologies and host of the Podcast at <a href=\"http://Delphi.org\" rel=\"nofollow\">http://Delphi.org</a></p>",
+            "web_url": "http://lanyrd.com/profile/jimmckeeth/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/a2736a7a5c3046c089d7eef1712fd1a26c2c2806-s300.jpeg",
+            "name": "Jim McKeeth",
+            "elsewhere": [],
+            "role": "Developer Evangelist for Embarcadero Technologies and host of the Podcast at http://Delphi.org",
+            "twitter": "@JimMcKeeth",
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/a2736a7a5c3046c089d7eef1712fd1a26c2c2806-s75.jpeg",
+            "speaker_bio": ""
+        },
+        {
+            "bio": "<p>Microsoft Regional Director | Visual Studio ALM MVP</p>",
+            "web_url": "http://lanyrd.com/profile/rhundhausen/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/386c09b33d9412fcdec5af875fb021d278519bf4-s300.jpeg",
+            "name": "Richard Hundhausen",
+            "elsewhere": [],
+            "role": "Microsoft Regional Director | Visual Studio ALM MVP",
+            "twitter": "@rhundhausen",
+            "image_75": "https://s3.amazonaws.com/static.lanyrd.net/cropped-profile-photos/386c09b33d9412fcdec5af875fb021d278519bf4-s75.jpeg",
+            "speaker_bio": ""
+        },
+        {
+            "bio": "<p>Oracle Core Database Administrator and Architect</p>",
+            "web_url": "http://lanyrd.com/profile/soscott/",
+            "image_300": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/694180d0367977f18180043ccff883489346506c-s300.jpeg",
+            "name": "Sean Scott",
+            "elsewhere": [],
+            "role": "Oracle Core Database Administrator and Architect",
+            "twitter": null,
+            "image_75": "https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/694180d0367977f18180043ccff883489346506c-s75.jpeg",
+            "speaker_bio": ""
+        }
+    ]
+}

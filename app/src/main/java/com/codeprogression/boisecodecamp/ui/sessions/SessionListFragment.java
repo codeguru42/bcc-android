@@ -27,6 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 
 import butterknife.ButterKnife;
 
@@ -39,6 +40,7 @@ public class SessionListFragment extends BaseListFragment {
     private SessionBackgroundTask sessionBackgroundTask;
 
     @Inject
+    @Named("MOCK")
     LanyrdApi api;
 
     public static SessionListFragment newInstance() {
@@ -108,27 +110,20 @@ public class SessionListFragment extends BaseListFragment {
 
 /*
 
-            try {
-                Thread.sleep(10000);
-            } catch (InterruptedException ignore) {}
+        FragmentActivity activity = getActivity();
 
-            ----------------
+        LOGD(TAG, "Running onPostExecute for session list");
+        if (activity == null){
+            LOGD(TAG, "Activity is null");
+        } else {
+            LOGD(TAG, "Activity is " + (activity.isFinishing() ? "finishing" : "alive"));
+        }
+        if (activity == null || activity.isFinishing()){
+            LOGD(TAG, "ABORT! ABORT!");
+            return;
+        }
 
-
-            FragmentActivity activity = getActivity();
-
-            LOGD(TAG, "Running onPostExecute for session list");
-            if (activity == null){
-                LOGD(TAG, "Activity is null");
-            } else {
-                LOGD(TAG, "Activity is " + (activity.isFinishing() ? "finishing" : "alive"));
-            }
-            if (activity == null || activity.isFinishing()){
-                LOGD(TAG, "ABORT! ABORT!");
-                return;
-            }
-
-            ---------------
+        ---------------
 
 
         LOGD(TAG, "Canceling background task FTW!");
