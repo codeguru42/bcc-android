@@ -8,7 +8,7 @@ We have many high profile clients, including HBO, NBC Universal, and CBS.
 
 I started with Vertigo last year and had no Android experience. (My previous experience has been in web development and before that server and network operations.)
 
-In the last year, I have learned that there are many ways to do Android wrong, but more importantly I have learned how to apply software engineering practices to make Android application development easier to do right.
+In my trial by fire, I have learned that there are many ways to do Android wrong, but more importantly I have learned how to apply software engineering practices to make Android application development easier to do right.
 
 # The problem
 
@@ -49,12 +49,15 @@ And as complexity increases, entropy increases, and these two forces fan each ot
 
 So, what do we do? 
 
-First, we make conscious efforts to develop our application with sensible defaults, or conventions. 
+First, we make conscious efforts to develop our application with sensible defaults, or conventions. I am not talking about convention over configuration specifically. I am talking about being consistent and predictable. Naming things in a consistent fashion. Organizing classes and resources in consistent ways. 
 
-Second, we turn to our software engineering principles. You may know some of these principles by their acronyms: SOLID, GRASP, DRY.
+Second, we turn to our software engineering principles. You may know some of these principles by their acronyms. The two I will touch on in this talk are SOLID and DRY.
 
+(Define principles)
 
+# Frameworks
 
+Throughout this session, you will see me using several open-source frameworks. Most have been open-sourced by a company named Square, Inc (or its employees).
 
 # List Adapter Patterns
 
@@ -81,7 +84,7 @@ Why its better?
 Why its not?
 
 * Still very cluttered and unreadable 
-* What is the purpose of this method? ... To get the view - not to construct it. This method is still doing too much
+* What is the purpose of this method? ... To get the view - not to construct it. This method is still doing too much (S in SOLID)
 
 Is there more we can do?
 
@@ -117,6 +120,107 @@ Our get view has 3 steps:
 * return the configured view as a row in the list
 
 Our SessionListItemView is subclassed from RelativeLayout and does what our ViewHolder did. But this is more explicit. And the adapter is much cleaner.
+
+If I've done this right, I never have to open this adapter again. It does its job. This is the O in SOLID.
+
+
+# Async Operations
+
+Assuming all of you have worked with Android before, how many of you create connected applications?
+
+What is the rule about getting data over a network connection?
+
+You can't perform network operations on the main thread of the application. You must move that operation to a separate thread.
+
+This is smart on Google's part. (Wait - those people at Google are smart?)
+
+What are our options for running tasks off the main thread?
+
+We can:
+
+* create our own thread
+* use an async task
+* use an Intent service
+* use a library
+
+I don't think that I would recommend creating your own thread very often, especially in regards to UI network operations. So, we'll just skip right to the async task.
+
+## The Async Task
+Let's take a look at our SessionListFragment
+
+In our scenario, we need data from our endpoint so we can display our list of sessions.
+
+So, in my onResume() method, I check to see if I have an existing list adapter, and if not, I execute my background task.
+
+Notice, I do this in onResume rather than onCreate. This is so I can handle returning from the detail page.
+
+This application uses a view pager. The view pager loads the current fragment and the fragments adjacent to them. So, our network call is happening as soon as we launch the application.
+
+Pretty slick, task runs - WHA-BAM! - I get my session list.
+
+Are there any problems here?
+
+What happens if you leave the activity before the network call completes?
+
+Let's find out.  We'll make our network call really slow.
+
+Then as soon as we launch our application, we'll send it to the background (causing our MainActivity to be destroyed).
+
+Cool our app is running in the background - everything seems to be working fine. Oh no! Crashed.
+
+Let's figure out what is happening. 
+
+Looking at the stack trace we can see that the activity was null when the postexecute block was run. So, even though we destroyed the activity itself. The async task still ran to completion ... sort-of.
+
+The first thing we should do is guard against a null activity.
+
+(update code)
+
+So, now we don't crash when we background the activity.
+
+Unfortunately, the async task still runs to completion even when we background the activity.
+
+To prevent that, we need to cancel the task if we background the _fragment_ not just the activity. If this were a more intense task, we would really want to save some memory and clock cycles. 
+
+If this were an async task that returned progress, we would probably want to have it stop processing any existing callbacks. And just to be safe we can add a guard in the post execute block too.
+
+# Using retrofit
+
+I wanted to show you a couple of http async libraries.
+
+The first is retrofit from Square. Now, we were using the synchronous retrofit calls when we had our async tasks. This time we will use the built-in callbacks.
+
+Unfortunately, we still need to guard against the activity being null. And there is no way to cancel the call if the fragment is paused, but that is in the works for v2.0.
+
+# Using volley
+
+Volley is very similar to Retrofit. It was introduced at Google IO last year.
+
+With volley, you create a RequestQueue singleton for the app. When you need to send an async web request, you create a Volley request and add it to the queue.
+
+The request has a method, url, return type and success and error listeners very similar to Retrofit. Unlike retrofit, each request formula has to be created separately.
+
+Retrofit and Volley perform very similar tasks. Retrofit is slightly faster and has a more conventional request syntax. Volley has the advantage of single and aggregate request cancellation.
+
+If I were to advise between the two, I would say that Retrofit is better for well-defined HTTP APIs, whereas Volley works better than retrofit for one-off requests or where cancellation is a priority.
+
+# Using an Intent Service
+
+We have a problem here, principling speaking. We are violating the open/closed principle. If we decide at some point in the future that we want to get the data from the database or a different api, we have to open this class and change the implementation. We probably have to open up another class as well.
+
+It would behoove us to abstract that call out of the activity and to some other entity.
+
+We can do that with an intent service.
+
+An intent service takes a requests, runs in a background thread OFF the main thread.  When it is done, we can notify changes via a broadcast receiver or a content provider.
+
+# Using a Service with an Event Bus
+
+Android has a primitive event bus built in. We saw the broadcast receiver which works within the app and can be used to work outside the app. I can listen to events from other applications.
+
+There is a local broadcast receiver that is available for in-app broadcasts only.  Unfortunately, this construct is very verbose and requires a lot of busywork using Intents and strings (hopefully from constants) and a lot of casting and unboxing.
+
+I have started using a library put out by Square, Inc.
 
 
 
