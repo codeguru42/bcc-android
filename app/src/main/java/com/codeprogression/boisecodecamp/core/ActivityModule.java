@@ -34,7 +34,6 @@ import dagger.Provides;
                 SpeakerDetailActivity.class,
                 SpeakerDetailFragment.class,
 
-                SessionListFragment.class
         },
         addsTo = AndroidModule.class,
         library = true

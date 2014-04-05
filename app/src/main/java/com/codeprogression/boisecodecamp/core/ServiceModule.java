@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.codeprogression.boisecodecamp.api.CodeCampApiWrapper;
 import com.codeprogression.boisecodecamp.services.LanyrdIntentService;
+import com.codeprogression.boisecodecamp.services.LanyrdService;
 import com.codeprogression.boisecodecamp.ui.HomeFragment;
 import com.codeprogression.boisecodecamp.ui.MainActivity;
 import com.codeprogression.boisecodecamp.ui.core.BaseActivity;
@@ -22,7 +23,8 @@ import dagger.Provides;
 
 @Module(
         injects = {
-                LanyrdIntentService.class
+                LanyrdIntentService.class,
+                LanyrdService.class
         },
         addsTo = AndroidModule.class,
         library = true
