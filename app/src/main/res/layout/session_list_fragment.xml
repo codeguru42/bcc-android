@@ -18,13 +18,19 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-        <TextView
-            android:id="@android:id/empty"
-            style="@style/Text.Secondary.Large"
+        <ScrollView
+            android:id="@+id/empty_scroller"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="No sessions available" />
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@android:id/empty"
+                style="@style/Text.Secondary.Large"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="No sessions available" />
+        </ScrollView>
     </FrameLayout>
 
 

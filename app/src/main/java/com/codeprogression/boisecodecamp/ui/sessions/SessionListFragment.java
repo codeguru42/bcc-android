@@ -2,7 +2,6 @@ package com.codeprogression.boisecodecamp.ui.sessions;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +10,7 @@ import android.widget.ListView;
 
 import com.codeprogression.boisecodecamp.R;
 import com.codeprogression.boisecodecamp.api.models.Session;
+import com.codeprogression.boisecodecamp.events.RequestSessionsEvent;
 import com.codeprogression.boisecodecamp.events.SessionsReceivedEvent;
 import com.codeprogression.boisecodecamp.ui.core.BaseListFragment;
 import com.codeprogression.boisecodecamp.ui.sessions.adapters.SessionListAdapter;
@@ -23,6 +23,7 @@ import java.util.List;
 import javax.inject.Inject;
 
 import butterknife.ButterKnife;
+import butterknife.InjectView;
 
 import static com.codeprogression.boisecodecamp.utils.LogUtils.makeLogTag;
 
@@ -35,6 +36,8 @@ public class SessionListFragment extends BaseListFragment implements SwipeRefres
     @Inject Bus bus;
     private SwipeRefreshLayout view;
 
+    @InjectView(R.id.empty_scroller)
+    View scroller;
 
     public static SessionListFragment newInstance() {
         return new SessionListFragment();
@@ -80,9 +83,12 @@ public class SessionListFragment extends BaseListFragment implements SwipeRefres
         if (listAdapter == null) {
             SessionListAdapter adapter = new SessionListAdapter(getActivity(), sessions);
             setListAdapter(adapter);
+            getListView().setEmptyView(scroller);
         } else {
             listAdapter.updateSessionList(sessions);
         }
+
+        view.setRefreshing(false);
     }
 
     @SuppressWarnings("UnusedDeclaration")
@@ -102,11 +108,7 @@ public class SessionListFragment extends BaseListFragment implements SwipeRefres
 
     @Override
     public void onRefresh() {
-        new Handler().postDelayed(new Runnable() {
-            @Override public void run() {
-                view.setRefreshing(false);
-            }
-        }, 5000);
+        bus.post(new RequestSessionsEvent());
     }
 }
 
