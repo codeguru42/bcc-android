@@ -3,10 +3,14 @@ package com.codeprogression.boisecodecamp.core;
 import android.content.Context;
 import android.net.http.HttpResponseCache;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.ImageLoader;
+import com.android.volley.toolbox.Volley;
 import com.codeprogression.boisecodecamp.BuildConfig;
 import com.codeprogression.boisecodecamp.CodeCampApplication;
 import com.codeprogression.boisecodecamp.api.LanyrdApi;
 import com.codeprogression.boisecodecamp.api.MockLanyrdClient;
+import com.codeprogression.boisecodecamp.api.core.OkHttpStack;
 import com.codeprogression.boisecodecamp.ui.speakers.views.SpeakerGridItemView;
 import com.codeprogression.boisecodecamp.ui.speakers.views.SpeakerListItemView;
 import com.google.gson.FieldNamingPolicy;
@@ -109,6 +113,11 @@ public class AndroidModule {
         return new GsonBuilder()
                     .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
                     .create();
+    }
+
+    @Provides @Singleton
+    RequestQueue provideRequestQueue(){
+        return Volley.newRequestQueue(application, new OkHttpStack(application));
     }
 
 }

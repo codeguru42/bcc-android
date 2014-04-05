@@ -8,8 +8,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.VolleyError;
 import com.codeprogression.boisecodecamp.R;
 import com.codeprogression.boisecodecamp.api.LanyrdApi;
+import com.codeprogression.boisecodecamp.api.core.GsonRestRequest;
 import com.codeprogression.boisecodecamp.api.models.Session;
 import com.codeprogression.boisecodecamp.api.models.SessionsResponse;
 import com.codeprogression.boisecodecamp.ui.core.BaseListFragment;
@@ -34,8 +37,8 @@ public class SessionListFragment extends BaseListFragment {
     public static final String TAG = makeLogTag(SessionListFragment.class);
 
     @Inject
-    @Named("MOCK")
-    LanyrdApi api;
+    RequestQueue requestQueue;
+    private GsonRestRequest<SessionsResponse> request;
 
     public static SessionListFragment newInstance() {
         return new SessionListFragment();
@@ -53,39 +56,40 @@ public class SessionListFragment extends BaseListFragment {
     public void onResume() {
         super.onResume();
         if (getListAdapter() == null) {
-            api.getSessions(new Callback<SessionsResponse>() {
-                @Override
-                public void success(SessionsResponse sessionsResponse, Response response) {
-                    if (isActivityDead()) return;
-                    handleSuccess(sessionsResponse.getSessions());
-                }
-
-                @Override
-                public void failure(RetrofitError error) {
-                    if (isActivityDead()) return;
-                    handleError();
-                }
-
-
-                private boolean isActivityDead() {
-                    FragmentActivity activity = getActivity();
-                    if (activity == null || activity.isFinishing()){
-                        return true;
-                    }
-                    return false;
-                }
-            });
-
+            request =
+                    new GsonRestRequest<>("http://lanyrd.com/2014/bcc2014/schedule/b1200ddb9996154d.v1.json",
+                            SessionsResponse.class,
+                            new com.android.volley.Response.Listener<SessionsResponse>() {
+                                @Override
+                                public void onResponse(SessionsResponse sessionsResponse) {
+                                    FragmentActivity activity = getActivity();
+                                    if (activity == null || activity.isFinishing()){
+                                        return;
+                                    }
+                                    handleSuccess(sessionsResponse.getSessions());
+                                }
+                            },
+                            new com.android.volley.Response.ErrorListener() {
+                                @Override
+                                public void onErrorResponse(VolleyError volleyError) {
+                                    FragmentActivity activity = getActivity();
+                                    if (activity == null || activity.isFinishing()){
+                                        return;
+                                    }
+                                    handleError();
+                                }
+                            }
+                    );
+            requestQueue.add(request);
         }
     }
 
     @Override
     public void onPause() {
         super.onPause();
-
-        /*
-            api.cancel not available on retrofit yet (planned for 2.0 release)
-         */
+        if (request != null){
+            request.cancel();
+        }
     }
 
     private void handleSuccess(List<Session> sessions) {
