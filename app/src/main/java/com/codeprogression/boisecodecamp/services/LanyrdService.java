@@ -8,7 +8,7 @@ import com.codeprogression.boisecodecamp.api.models.Session;
 import com.codeprogression.boisecodecamp.api.models.SessionsResponse;
 import com.codeprogression.boisecodecamp.api.models.Speaker;
 import com.codeprogression.boisecodecamp.api.models.SpeakerResponse;
-import com.codeprogression.boisecodecamp.events.SessionsReceivedEvent;
+import com.codeprogression.boisecodecamp.events.SessionsChangedEvent;
 import com.codeprogression.boisecodecamp.events.SpeakersReceivedEvent;
 import com.squareup.otto.Bus;
 import com.squareup.otto.Produce;
@@ -94,12 +94,12 @@ public class LanyrdService extends ServiceBase {
 
     private void handleSessionsSuccess(List<Session> sessions) {
         this.sessions = sessions;
-        bus.post(new SessionsReceivedEvent(sessions));
+        bus.post(new SessionsChangedEvent(sessions));
     }
 
     @Produce
-    public SessionsReceivedEvent onSessionsReceived(){
-        return new SessionsReceivedEvent(sessions);
+    public SessionsChangedEvent onSessionsReceived(){
+        return new SessionsChangedEvent(sessions);
     }
 
     @Produce

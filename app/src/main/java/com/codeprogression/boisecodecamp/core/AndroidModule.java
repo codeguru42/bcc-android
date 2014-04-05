@@ -73,10 +73,11 @@ public class AndroidModule {
     @Provides @Singleton
     LanyrdApi provideLanyrdApi(){
         RestAdapter.Builder builder = new RestAdapter.Builder();
-        OkClient client = new OkClient();
 
         OkHttpClient okHttpClient = new OkHttpClient();
         File cacheDir = new File(application.getFilesDir(), "response_cache");
+
+        //noinspection ResultOfMethodCallIgnored
         cacheDir.setWritable(true, true);
         try {
             HttpResponseCache cache = HttpResponseCache.install(cacheDir, 1024);

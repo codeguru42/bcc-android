@@ -4,11 +4,11 @@ import com.codeprogression.boisecodecamp.api.models.Session;
 
 import java.util.List;
 
-public class SessionsReceivedEvent {
+public class SessionsChangedEvent {
 
     private List<Session> sessions;
 
-    public SessionsReceivedEvent(List<Session> sessions) {
+    public SessionsChangedEvent(List<Session> sessions) {
         this.sessions = sessions;
     }
 

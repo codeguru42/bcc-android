@@ -13,8 +13,12 @@ import com.codeprogression.boisecodecamp.R;
 import com.codeprogression.boisecodecamp.api.LanyrdApi;
 import com.codeprogression.boisecodecamp.api.models.Speaker;
 import com.codeprogression.boisecodecamp.api.models.SpeakerResponse;
+import com.codeprogression.boisecodecamp.events.SpeakersReceivedEvent;
 import com.codeprogression.boisecodecamp.ui.speakers.adapters.SpeakerGridAdapter;
 import com.codeprogression.boisecodecamp.ui.core.BaseFragment;
+import com.codeprogression.boisecodecamp.ui.speakers.adapters.SpeakerListAdapter;
+import com.squareup.otto.Bus;
+import com.squareup.otto.Subscribe;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +36,8 @@ public class SpeakerGridFragment extends BaseFragment implements AbsListView.OnI
     @InjectView(R.id.grid)
     GridView gridView;
 
-    @Inject LanyrdApi api;
+
+    @Inject Bus bus;
 
     private SpeakerGridAdapter adapter;
 
@@ -55,25 +60,31 @@ public class SpeakerGridFragment extends BaseFragment implements AbsListView.OnI
     @Override
     public void onResume() {
         super.onResume();
-        api.getSpeakers(new Callback<SpeakerResponse>() {
-            @Override
-            public void success(SpeakerResponse speakerResponse, Response response) {
-                List<Speaker> speakers = speakerResponse.getSpeakers();
+        bus.register(this);
+    }
 
-                if (adapter == null){
-                    adapter = new SpeakerGridAdapter(getActivity(), speakers);
-                    gridView.setAdapter(adapter);
-                    gridView.setOnItemClickListener(SpeakerGridFragment.this);
-                } else {
-                    adapter.updateSpeakerList(speakers);
-                }
-            }
+    @Override
+    public void onPause() {
+        super.onPause();
+        bus.unregister(this);
+    }
 
-            @Override
-            public void failure(RetrofitError error) {
+    @Subscribe
+    public void onSpeakersReceived(SpeakersReceivedEvent event){
+        handleSuccess(event.getSpeakers());
+    }
 
-            }
-        });
+    private void handleSuccess(List<Speaker> speakers) {
+        if (speakers == null){
+            return;
+        }
+        if (adapter == null) {
+            adapter = new SpeakerGridAdapter(getActivity(), speakers);
+            gridView.setAdapter(adapter);
+            gridView.setOnItemClickListener(SpeakerGridFragment.this);
+        } else {
+            adapter.updateSpeakerList(speakers);
+        }
     }
 
     @Override
@@ -85,8 +96,4 @@ public class SpeakerGridFragment extends BaseFragment implements AbsListView.OnI
         intent.putExtras(bundle);
         startActivity(intent);
     }
-
-    public interface Callbacks {
-    }
-
 }

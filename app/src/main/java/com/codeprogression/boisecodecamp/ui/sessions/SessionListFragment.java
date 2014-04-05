@@ -11,7 +11,7 @@ import android.widget.ListView;
 import com.codeprogression.boisecodecamp.R;
 import com.codeprogression.boisecodecamp.api.models.Session;
 import com.codeprogression.boisecodecamp.events.RequestSessionsEvent;
-import com.codeprogression.boisecodecamp.events.SessionsReceivedEvent;
+import com.codeprogression.boisecodecamp.events.SessionsChangedEvent;
 import com.codeprogression.boisecodecamp.ui.core.BaseListFragment;
 import com.codeprogression.boisecodecamp.ui.sessions.adapters.SessionListAdapter;
 import com.squareup.otto.Bus;
@@ -56,13 +56,6 @@ public class SessionListFragment extends BaseListFragment implements SwipeRefres
     public void onResume() {
         super.onResume();
         bus.register(this);
-
-                if (listAdapter == null){
-                    SessionListAdapter adapter = new SessionListAdapter(getActivity(), sessions);
-                    setListAdapter(adapter);
-                } else {
-                    listAdapter.updateSessionList(sessions);
-                }
     }
 
     @Override
@@ -76,7 +69,7 @@ public class SessionListFragment extends BaseListFragment implements SwipeRefres
      * Sometimes com.google.common.eventbus.Subscribe gets imported by Android Studio instead.
      */
     @Subscribe
-    public void onSessionReceived(SessionsReceivedEvent event){
+    public void onSessionsChanged(SessionsChangedEvent event){
         handleSuccess(event.getSessions());
     }
 
