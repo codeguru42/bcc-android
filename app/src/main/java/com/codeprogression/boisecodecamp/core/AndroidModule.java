@@ -119,5 +119,4 @@ public class AndroidModule {
     RequestQueue provideRequestQueue(){
         return Volley.newRequestQueue(application, new OkHttpStack(application));
     }
-
 }

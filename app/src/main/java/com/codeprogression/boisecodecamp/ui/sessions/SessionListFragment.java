@@ -1,7 +1,11 @@
 package com.codeprogression.boisecodecamp.ui.sessions;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +19,7 @@ import com.codeprogression.boisecodecamp.api.LanyrdApi;
 import com.codeprogression.boisecodecamp.api.core.GsonRestRequest;
 import com.codeprogression.boisecodecamp.api.models.Session;
 import com.codeprogression.boisecodecamp.api.models.SessionsResponse;
+import com.codeprogression.boisecodecamp.services.LanyrdIntentService;
 import com.codeprogression.boisecodecamp.ui.core.BaseListFragment;
 import com.codeprogression.boisecodecamp.ui.sessions.adapters.SessionListAdapter;
 
@@ -55,41 +60,21 @@ public class SessionListFragment extends BaseListFragment {
     @Override
     public void onResume() {
         super.onResume();
+
+        getActivity().registerReceiver(receiver, new IntentFilter(LanyrdIntentService.SESSION_RESPONSE));
+
         if (getListAdapter() == null) {
-            request =
-                    new GsonRestRequest<>("http://lanyrd.com/2014/bcc2014/schedule/b1200ddb9996154d.v1.json",
-                            SessionsResponse.class,
-                            new com.android.volley.Response.Listener<SessionsResponse>() {
-                                @Override
-                                public void onResponse(SessionsResponse sessionsResponse) {
-                                    FragmentActivity activity = getActivity();
-                                    if (activity == null || activity.isFinishing()){
-                                        return;
-                                    }
-                                    handleSuccess(sessionsResponse.getSessions());
-                                }
-                            },
-                            new com.android.volley.Response.ErrorListener() {
-                                @Override
-                                public void onErrorResponse(VolleyError volleyError) {
-                                    FragmentActivity activity = getActivity();
-                                    if (activity == null || activity.isFinishing()){
-                                        return;
-                                    }
-                                    handleError();
-                                }
-                            }
-                    );
-            requestQueue.add(request);
+            Intent intent = new Intent(getActivity(), LanyrdIntentService.class);
+            intent.setAction(LanyrdIntentService.SESSION_REQUEST);
+            getActivity().startService(intent);
         }
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        if (request != null){
-            request.cancel();
-        }
+        getActivity().unregisterReceiver(receiver);
+
     }
 
     private void handleSuccess(List<Session> sessions) {
@@ -116,6 +101,16 @@ public class SessionListFragment extends BaseListFragment {
         intent.putExtras(bundle);
         startActivity(intent);
     }
+
+    private BroadcastReceiver receiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (intent.getAction().equals(LanyrdIntentService.SESSION_RESPONSE)){
+                List<Session> sessions = intent.getParcelableArrayListExtra(LanyrdIntentService.SESSION_LIST);
+                handleSuccess(sessions);
+            }
+        }
+    };
 
 }
 

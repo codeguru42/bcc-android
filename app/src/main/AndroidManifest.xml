@@ -32,9 +32,12 @@
             android:name="com.codeprogression.boisecodecamp.ui.ErrorActivity"
             android:label="@string/title_activity_error"/>
 
+        <service android:name=".services.LanyrdIntentService"
+            android:exported="false" />
         <meta-data
             android:name="com.crashlytics.ApiKey"
             android:value="8d8b19ca26df611c13afe7eadd19ff9ee759dd13" />
+
     </application>
 
 
