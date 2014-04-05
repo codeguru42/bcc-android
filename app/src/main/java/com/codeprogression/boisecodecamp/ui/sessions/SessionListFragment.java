@@ -2,6 +2,8 @@ package com.codeprogression.boisecodecamp.ui.sessions;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +12,6 @@ import android.widget.ListView;
 import com.codeprogression.boisecodecamp.R;
 import com.codeprogression.boisecodecamp.api.models.Session;
 import com.codeprogression.boisecodecamp.events.SessionsReceivedEvent;
-import com.codeprogression.boisecodecamp.services.LanyrdIntentService;
 import com.codeprogression.boisecodecamp.ui.core.BaseListFragment;
 import com.codeprogression.boisecodecamp.ui.sessions.adapters.SessionListAdapter;
 import com.squareup.otto.Bus;
@@ -26,12 +27,14 @@ import butterknife.ButterKnife;
 import static com.codeprogression.boisecodecamp.utils.LogUtils.makeLogTag;
 
 
-public class SessionListFragment extends BaseListFragment {
+public class SessionListFragment extends BaseListFragment implements SwipeRefreshLayout.OnRefreshListener {
 
     @SuppressWarnings("UnusedDeclaration")
     public static final String TAG = makeLogTag(SessionListFragment.class);
 
     @Inject Bus bus;
+    private SwipeRefreshLayout view;
+
 
     public static SessionListFragment newInstance() {
         return new SessionListFragment();
@@ -40,8 +43,9 @@ public class SessionListFragment extends BaseListFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.session_list_fragment, container, false);
+        view = (SwipeRefreshLayout) inflater.inflate(R.layout.session_list_fragment, container, false);
         ButterKnife.inject(this, view);
+        view.setOnRefreshListener(this);
         return view;
     }
 
@@ -96,5 +100,13 @@ public class SessionListFragment extends BaseListFragment {
         startActivity(intent);
     }
 
+    @Override
+    public void onRefresh() {
+        new Handler().postDelayed(new Runnable() {
+            @Override public void run() {
+                view.setRefreshing(false);
+            }
+        }, 5000);
+    }
 }
 
