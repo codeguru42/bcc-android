@@ -2,6 +2,7 @@ package com.codeprogression.boisecodecamp.ui.speakers;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.widget.ListView;
 
 import com.codeprogression.boisecodecamp.R;
 import com.codeprogression.boisecodecamp.api.models.Speaker;
+import com.codeprogression.boisecodecamp.events.RequestSpeakersEvent;
 import com.codeprogression.boisecodecamp.events.SpeakersChangedEvent;
 import com.codeprogression.boisecodecamp.ui.core.BaseListFragment;
 import com.codeprogression.boisecodecamp.ui.speakers.adapters.SpeakerListAdapter;
@@ -21,10 +23,17 @@ import java.util.List;
 import javax.inject.Inject;
 
 import butterknife.ButterKnife;
+import butterknife.InjectView;
 
-public class SpeakerListFragment extends BaseListFragment {
+public class SpeakerListFragment extends BaseListFragment implements SwipeRefreshLayout.OnRefreshListener {
 
     @Inject Bus bus;
+
+    private SwipeRefreshLayout view;
+
+
+    @InjectView(R.id.empty_scroller)
+    View scroller;
 
     public static SpeakerListFragment newInstance() {
         SpeakerListFragment fragment = new SpeakerListFragment();
@@ -37,8 +46,9 @@ public class SpeakerListFragment extends BaseListFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.speaker_list_fragment, container, false);
+        view = (SwipeRefreshLayout)inflater.inflate(R.layout.speaker_list_fragment, container, false);
         ButterKnife.inject(this, view);
+        view.setOnRefreshListener(this);
         return view;
     }
 
@@ -67,9 +77,12 @@ public class SpeakerListFragment extends BaseListFragment {
         if (adapter == null){
             adapter = new SpeakerListAdapter(getActivity(), speakers);
             setListAdapter(adapter);
+            getListView().setEmptyView(scroller);
         } else {
             adapter.updateSpeakerList(speakers);
         }
+
+        view.setRefreshing(false);
     }
 
     @Override
@@ -80,5 +93,11 @@ public class SpeakerListFragment extends BaseListFragment {
         bundle.putInt("POSITION", position);
         intent.putExtras(bundle);
         startActivity(intent);
+    }
+
+
+    @Override
+    public void onRefresh() {
+        bus.post(new RequestSpeakersEvent());
     }
 }
