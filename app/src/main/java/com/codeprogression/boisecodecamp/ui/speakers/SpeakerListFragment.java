@@ -9,7 +9,7 @@ import android.widget.ListView;
 
 import com.codeprogression.boisecodecamp.R;
 import com.codeprogression.boisecodecamp.api.models.Speaker;
-import com.codeprogression.boisecodecamp.events.SpeakersReceivedEvent;
+import com.codeprogression.boisecodecamp.events.SpeakersChangedEvent;
 import com.codeprogression.boisecodecamp.ui.core.BaseListFragment;
 import com.codeprogression.boisecodecamp.ui.speakers.adapters.SpeakerListAdapter;
 import com.squareup.otto.Bus;
@@ -55,7 +55,7 @@ public class SpeakerListFragment extends BaseListFragment {
     }
 
     @Subscribe
-    public void onSpeakersReceived(SpeakersReceivedEvent event){
+    public void onSpeakersReceived(SpeakersChangedEvent event){
         handleSuccess(event.getSpeakers());
     }
 

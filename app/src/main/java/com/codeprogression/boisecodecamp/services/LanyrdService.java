@@ -8,10 +8,13 @@ import com.codeprogression.boisecodecamp.api.models.Session;
 import com.codeprogression.boisecodecamp.api.models.SessionsResponse;
 import com.codeprogression.boisecodecamp.api.models.Speaker;
 import com.codeprogression.boisecodecamp.api.models.SpeakerResponse;
+import com.codeprogression.boisecodecamp.events.RequestSessionsEvent;
+import com.codeprogression.boisecodecamp.events.RequestSpeakersEvent;
 import com.codeprogression.boisecodecamp.events.SessionsChangedEvent;
-import com.codeprogression.boisecodecamp.events.SpeakersReceivedEvent;
+import com.codeprogression.boisecodecamp.events.SpeakersChangedEvent;
 import com.squareup.otto.Bus;
 import com.squareup.otto.Produce;
+import com.squareup.otto.Subscribe;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,7 +62,6 @@ public class LanyrdService extends ServiceBase {
 
     private void getSessions() {
         api.getSessions(new Callback<SessionsResponse>() {
-            ;
 
             @Override
             public void success(SessionsResponse sessionsResponse, Response response) {
@@ -89,7 +91,7 @@ public class LanyrdService extends ServiceBase {
 
     private void handleSpeakersSuccess(List<Speaker> speakers) {
         this.speakers = speakers;
-        bus.post(new SpeakersReceivedEvent(speakers));
+        bus.post(new SpeakersChangedEvent(speakers));
     }
 
     private void handleSessionsSuccess(List<Session> sessions) {
@@ -98,14 +100,23 @@ public class LanyrdService extends ServiceBase {
     }
 
     @Produce
-    public SessionsChangedEvent onSessionsReceived(){
+    public SessionsChangedEvent onSessionsChanged(){
         return new SessionsChangedEvent(sessions);
     }
 
     @Produce
-    public SpeakersReceivedEvent onSpeakersReceived(){
-        return new SpeakersReceivedEvent(speakers);
+    public SpeakersChangedEvent onSpeakersChanged(){
+        return new SpeakersChangedEvent(speakers);
     }
 
+    @Subscribe
+    public void onSessionRequest(RequestSessionsEvent event){
+        getSessions();
+    }
+
+    @Subscribe
+    public void onSpeakerRequest(RequestSpeakersEvent event){
+        getSpeakers();
+    }
 
 }

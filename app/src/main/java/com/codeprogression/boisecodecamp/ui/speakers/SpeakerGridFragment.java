@@ -10,13 +10,10 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 
 import com.codeprogression.boisecodecamp.R;
-import com.codeprogression.boisecodecamp.api.LanyrdApi;
 import com.codeprogression.boisecodecamp.api.models.Speaker;
-import com.codeprogression.boisecodecamp.api.models.SpeakerResponse;
-import com.codeprogression.boisecodecamp.events.SpeakersReceivedEvent;
+import com.codeprogression.boisecodecamp.events.SpeakersChangedEvent;
 import com.codeprogression.boisecodecamp.ui.speakers.adapters.SpeakerGridAdapter;
 import com.codeprogression.boisecodecamp.ui.core.BaseFragment;
-import com.codeprogression.boisecodecamp.ui.speakers.adapters.SpeakerListAdapter;
 import com.squareup.otto.Bus;
 import com.squareup.otto.Subscribe;
 
@@ -27,9 +24,6 @@ import javax.inject.Inject;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
-import retrofit.Callback;
-import retrofit.RetrofitError;
-import retrofit.client.Response;
 
 public class SpeakerGridFragment extends BaseFragment implements AbsListView.OnItemClickListener {
 
@@ -70,7 +64,7 @@ public class SpeakerGridFragment extends BaseFragment implements AbsListView.OnI
     }
 
     @Subscribe
-    public void onSpeakersReceived(SpeakersReceivedEvent event){
+    public void onSpeakersReceived(SpeakersChangedEvent event){
         handleSuccess(event.getSpeakers());
     }
 

@@ -4,10 +4,10 @@ import com.codeprogression.boisecodecamp.api.models.Speaker;
 
 import java.util.List;
 
-public class SpeakersReceivedEvent {
+public class SpeakersChangedEvent {
     private List<Speaker> speakers;
 
-    public SpeakersReceivedEvent(List<Speaker> speakers) {
+    public SpeakersChangedEvent(List<Speaker> speakers) {
 
         this.speakers = speakers;
     }
