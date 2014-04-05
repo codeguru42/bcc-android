@@ -56,6 +56,13 @@ public class SessionListFragment extends BaseListFragment implements SwipeRefres
     public void onResume() {
         super.onResume();
         bus.register(this);
+
+                if (listAdapter == null){
+                    SessionListAdapter adapter = new SessionListAdapter(getActivity(), sessions);
+                    setListAdapter(adapter);
+                } else {
+                    listAdapter.updateSessionList(sessions);
+                }
     }
 
     @Override
@@ -91,7 +98,6 @@ public class SessionListFragment extends BaseListFragment implements SwipeRefres
         view.setRefreshing(false);
     }
 
-    @SuppressWarnings("UnusedDeclaration")
     private void handleError() {
     }
 

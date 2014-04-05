@@ -26,10 +26,7 @@ public class SessionListAdapter extends ArrayAdapter<Session> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        SessionListItemView view =
-                convertView == null
-                        ? new SessionListItemView(getContext())
-                        : (SessionListItemView) convertView;
+        SessionListItemView view = ((convertView == null) ? new SessionListItemView(getContext()) : (SessionListItemView) convertView);
 
         view.render(getItem(position));
 
