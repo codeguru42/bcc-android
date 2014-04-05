@@ -11,7 +11,7 @@ import com.codeprogression.boisecodecamp.ui.sessions.views.SessionListItemView;
 
 import java.util.List;
 
-public class SessionListAdapter extends ArrayAdapter<Session> implements IListable {
+public class SessionListAdapter extends ArrayAdapter<Session> {
     private List<Session> list;
 
     public SessionListAdapter(Context context, List<Session> list) {

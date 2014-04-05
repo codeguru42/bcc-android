@@ -3,8 +3,11 @@ package com.codeprogression.boisecodecamp.core;
 import android.content.Context;
 
 import com.codeprogression.boisecodecamp.api.CodeCampApiWrapper;
+import com.codeprogression.boisecodecamp.services.LanyrdIntentService;
+import com.codeprogression.boisecodecamp.services.LanyrdService;
 import com.codeprogression.boisecodecamp.ui.HomeFragment;
 import com.codeprogression.boisecodecamp.ui.MainActivity;
+import com.codeprogression.boisecodecamp.ui.core.BaseActivity;
 import com.codeprogression.boisecodecamp.ui.sessions.SessionDetailActivity;
 import com.codeprogression.boisecodecamp.ui.sessions.SessionDetailFragment;
 import com.codeprogression.boisecodecamp.ui.sessions.SessionListFragment;
@@ -12,7 +15,6 @@ import com.codeprogression.boisecodecamp.ui.speakers.SpeakerDetailActivity;
 import com.codeprogression.boisecodecamp.ui.speakers.SpeakerDetailFragment;
 import com.codeprogression.boisecodecamp.ui.speakers.SpeakerGridFragment;
 import com.codeprogression.boisecodecamp.ui.speakers.SpeakerListFragment;
-import com.codeprogression.boisecodecamp.ui.core.BaseActivity;
 
 import javax.inject.Singleton;
 
@@ -21,41 +23,26 @@ import dagger.Provides;
 
 @Module(
         injects = {
-                MainActivity.class,
-
-                HomeFragment.class,
-
-                SessionListFragment.class,
-                SessionDetailActivity.class,
-                SessionDetailFragment.class,
-
-                SpeakerGridFragment.class,
-                SpeakerListFragment.class,
-                SpeakerDetailActivity.class,
-                SpeakerDetailFragment.class,
-
+                LanyrdIntentService.class,
+                LanyrdService.class
         },
         addsTo = AndroidModule.class,
         library = true
 )
-public class ActivityModule {
+public class ServiceModule {
 
-    private BaseActivity activity;
+    private Context context;
 
-    public ActivityModule(BaseActivity activity) {
+    public ServiceModule(Context context) {
+        this.context = context;
 
-        this.activity = activity;
     }
 
     @Provides
     @Singleton
-    @ForActivity
-    Context provideApplicationContext() {
-        return activity;
+    @ForService
+    Context provideServiceContext() {
+        return context;
     }
 
-    @Provides @Singleton @ForActivity
-    CodeCampApiWrapper provideApiWrapper(CodeCampApiWrapper api){
-        return api;
-    }
 }

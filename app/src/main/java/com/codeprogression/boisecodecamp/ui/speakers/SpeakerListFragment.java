@@ -8,11 +8,12 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.codeprogression.boisecodecamp.R;
-import com.codeprogression.boisecodecamp.api.LanyrdApi;
 import com.codeprogression.boisecodecamp.api.models.Speaker;
-import com.codeprogression.boisecodecamp.api.models.SpeakerResponse;
-import com.codeprogression.boisecodecamp.ui.speakers.adapters.SpeakerListAdapter;
+import com.codeprogression.boisecodecamp.events.SpeakersReceivedEvent;
 import com.codeprogression.boisecodecamp.ui.core.BaseListFragment;
+import com.codeprogression.boisecodecamp.ui.speakers.adapters.SpeakerListAdapter;
+import com.squareup.otto.Bus;
+import com.squareup.otto.Subscribe;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,13 +21,10 @@ import java.util.List;
 import javax.inject.Inject;
 
 import butterknife.ButterKnife;
-import retrofit.Callback;
-import retrofit.RetrofitError;
-import retrofit.client.Response;
 
 public class SpeakerListFragment extends BaseListFragment {
 
-    @Inject LanyrdApi api;
+    @Inject Bus bus;
 
     public static SpeakerListFragment newInstance() {
         SpeakerListFragment fragment = new SpeakerListFragment();
@@ -47,24 +45,31 @@ public class SpeakerListFragment extends BaseListFragment {
     @Override
     public void onResume() {
         super.onResume();
-        api.getSpeakers(new Callback<SpeakerResponse>() {
-            @Override
-            public void success(SpeakerResponse speakerResponse, Response response) {
-                List<Speaker> speakers = speakerResponse.getSpeakers();
-                SpeakerListAdapter adapter = ((SpeakerListAdapter)getListAdapter());
-                if (adapter == null){
-                    adapter = new SpeakerListAdapter(getActivity(), speakers);
-                    setListAdapter(adapter);
-                } else {
-                    adapter.updateSpeakerList(speakers);
-                }
-            }
+        bus.register(this);
+    }
 
-            @Override
-            public void failure(RetrofitError error) {
+    @Override
+    public void onPause() {
+        super.onPause();
+        bus.unregister(this);
+    }
 
-            }
-        });
+    @Subscribe
+    public void onSpeakersReceived(SpeakersReceivedEvent event){
+        handleSuccess(event.getSpeakers());
+    }
+
+    private void handleSuccess(List<Speaker> speakers) {
+        if (speakers == null){
+            return;
+        }
+        SpeakerListAdapter adapter = ((SpeakerListAdapter)getListAdapter());
+        if (adapter == null){
+            adapter = new SpeakerListAdapter(getActivity(), speakers);
+            setListAdapter(adapter);
+        } else {
+            adapter.updateSpeakerList(speakers);
+        }
     }
 
     @Override

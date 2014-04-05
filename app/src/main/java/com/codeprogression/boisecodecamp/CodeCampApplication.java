@@ -1,6 +1,9 @@
 package com.codeprogression.boisecodecamp;
 
+import android.content.Intent;
+
 import com.codeprogression.boisecodecamp.core.DaggerApplication;
+import com.codeprogression.boisecodecamp.services.LanyrdService;
 import com.crashlytics.android.Crashlytics;
 
 public class CodeCampApplication extends DaggerApplication {
@@ -12,9 +15,15 @@ public class CodeCampApplication extends DaggerApplication {
         super.onCreate();
         instance = this;
 
-//        if (!BuildConfig.DEBUG) {
-//            Crashlytics.start(this);
-//        }
+        Intent intent = new Intent(this, LanyrdService.class);
+        startService(intent);
+    }
+
+    @Override
+    public void onTerminate() {
+        super.onTerminate();
+        Intent intent = new Intent(this, LanyrdService.class);
+        stopService(intent);
     }
 
     public static CodeCampApplication getInstance(){
